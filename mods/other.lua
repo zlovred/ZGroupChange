@@ -239,6 +239,12 @@ do	--[[chemistry]]--
 	iadd("z-chemistry-9",	"y_syngas_raw-in-tanker",			"s")
 		
 end
+do	--[[automatization]]--
+	-- burner filter inserter
+	if i_exist("burner-filter-inserter") then
+		aadd("z-automatization-1",	"burner-filter-inserter",   "a")
+	end
+end
 do	--[[transport]]--
 	-- belt sorter
 	aadd("z-transport-0",			"belt-sorter",				"h")
