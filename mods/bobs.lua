@@ -32,11 +32,12 @@ do	--[[gathering]]--
 	aadd("z-gathering-7",		"bob-area-mining-drill-2",	"b")
 	aadd("z-gathering-7",		"bob-area-mining-drill-3",	"c")
 	aadd("z-gathering-7",		"bob-area-mining-drill-4",	"d")
-  
+
   if allow_changes and i_not_exist("5d-small-pump") then
 	aadd("z-gathering-8",		"small-pump-2",				"e")
 	aadd("z-gathering-8",		"small-pump-3",				"f")
 	aadd("z-gathering-8",		"small-pump-4",				"g")
+	aadd("z-gathering-8",		"void-pump",				"h")
   elseif allow_changes then
 	aadd("z-gathering-8",		"small-pump",				"d")
 	aadd("z-gathering-8",		"5d-small-pump",			"e")
@@ -81,7 +82,7 @@ do	--[[gathering]]--
 	aadd("z-gathering-11",		"air-pump-3",				"j")
 	aadd("z-gathering-11",		"air-pump-4",				"k")
 	aadd("z-gathering-11",		"air-pump-5",				"l")
-  
+
   if allow_changes and i_exist("5d-mining-drill-speed-1") then
 	ahide("bob-area-drill-1")
 	ahide("bob-area-drill-2")
@@ -116,7 +117,7 @@ do	--[[gathering]]--
 	zgc.t_add_recipe_unlock("bob-fluid-handling-3", "storage-tank-3")
 	zgc.t_add_recipe_unlock("bob-fluid-handling-4", "storage-tank-4")
   end
-  
+
 	if use_graphics_tunnings then
 		zgc.set_icon("water-miner-1", "__ZGroupChange__/graphics/icons/pump_water.png")
 		zgc.set_icon("water-miner-2", "__ZGroupChange__/graphics/icons/pump_water.png")
@@ -269,7 +270,7 @@ do	--[[production]]--
 	aadd("z-production-2",		"5d-electric-furnace",			"d")
 	aadd("z-production-2",		"electric-mixing-furnace",		"e")
   end
-  
+
   if not allow_changes then
 	aadd("z-production-5",		"electronics-machine-1",		"a")
 	aadd("z-production-5",		"electronics-machine-2",		"b")
@@ -283,7 +284,7 @@ do	--[[production]]--
 	switch_tech("electronics-machine-2")
 	switch_tech("electronics-machine-3")
   end
-  
+
 end
 do	--[[resources]]--
 
@@ -601,7 +602,7 @@ do	--[[automatization]]--
 		aadd("z-automatization-2",	"express-stack-inserter",		"i")
 	end
   end
-  
+
   if z_balance.bob_inserters then
 	ahide("long-handed-inserter","inserter")
 	ahide("5d-inserter-speed1-range3","inserter")
@@ -652,7 +653,7 @@ do	--[[automatization]]--
 end
 do	--[[transport]]--
 	aadd("z-transport-5",		"valve",						"a")
-	
+
   if allow_changes then
 	if i_exist("5d-mk4-transport-belt") then
 		ahide("green-transport-belt")
@@ -664,13 +665,29 @@ do	--[[transport]]--
 	else
 		aadd("z-transport-0",	"green-transport-belt",			"f")
 		aadd("z-transport-0",	"purple-transport-belt",		"g")
-		
+
 		aadd("z-transport-1",	"green-underground-belt",		"f")
 		aadd("z-transport-1",	"purple-underground-belt",		"g")
-	
+
 		aadd("z-transport-4",	"green-splitter",				"f")
 		aadd("z-transport-4",	"purple-splitter",				"g")
 	end
+
+	switch_tech("bob-logistics-4")
+	switch_tech("bob-logistics-5")
+
+  else
+	aadd("z-transport-0",	"green-transport-belt",			"f")
+	aadd("z-transport-0",	"purple-transport-belt",		"g")
+
+	aadd("z-transport-1",	"green-underground-belt",		"f")
+	aadd("z-transport-1",	"purple-underground-belt",		"g")
+
+	aadd("z-transport-4",	"green-splitter",				"f")
+	aadd("z-transport-4",	"purple-splitter",				"g")
+  end
+
+  if z_balance.bob_pipes then
 	if data.raw.item["5d-pipe-mk2"] then
 		ahide("copper-pipe")
 		ahide("steel-pipe")
@@ -681,11 +698,10 @@ do	--[[transport]]--
 	else
 		aadd("z-transport-8",	"copper-pipe",					"b")
 		aadd("z-transport-8",	"steel-pipe",					"d")
-		
+
 		aadd("z-transport-9",	"copper-pipe-to-ground",		"b")
 		aadd("z-transport-9",	"steel-pipe-to-ground",			"d")
 	end
-	
 	ahide("stone-pipe")
 	ahide("bronze-pipe")
 	ahide("plastic-pipe")
@@ -700,10 +716,6 @@ do	--[[transport]]--
 	ahide("ceramic-pipe-to-ground")
 	ahide("titanium-pipe-to-ground")
 	ahide("tungsten-pipe-to-ground")
-	
-	switch_tech("bob-logistics-4")
-	switch_tech("bob-logistics-5")
-	
 	zgc.r_replace_ingredient_in_all("bronze-pipe", "pipe")
 
 	if data.raw.item["5d-pipe-mk2"] then
@@ -721,15 +733,6 @@ do	--[[transport]]--
 		zgc.r_replace_ingredient_in_all("tungsten-pipe", "steel-pipe")
 	end
   else
-	aadd("z-transport-0",	"green-transport-belt",			"f")
-	aadd("z-transport-0",	"purple-transport-belt",		"g")
-	
-	aadd("z-transport-1",	"green-underground-belt",		"f")
-	aadd("z-transport-1",	"purple-underground-belt",		"g")
-
-	aadd("z-transport-4",	"green-splitter",				"f")
-	aadd("z-transport-4",	"purple-splitter",				"g")
-	
 	aadd("z-transport-6",	"stone-pipe",					"a")
 	aadd("z-transport-6",	"copper-pipe",					"b")
 	aadd("z-transport-6",	"steel-pipe",					"c")
@@ -739,7 +742,7 @@ do	--[[transport]]--
 	aadd("z-transport-6",	"ceramic-pipe",					"g")
 	aadd("z-transport-6",	"titanium-pipe",				"h")
 	aadd("z-transport-6",	"tungsten-pipe",				"i")
-	
+
 	aadd("z-transport-7",	"stone-pipe-to-ground",			"a")
 	aadd("z-transport-7",	"copper-pipe-to-ground",		"b")
 	aadd("z-transport-7",	"steel-pipe-to-ground",			"c")
@@ -750,27 +753,25 @@ do	--[[transport]]--
 	aadd("z-transport-7",	"titanium-pipe-to-ground",		"h")
 	aadd("z-transport-7",	"tungsten-pipe-to-ground",		"i")
   end
-	
-	
-	if use_graphics_tunnings then
-		local function set_sprite(pic)
-			local pic = pic or "u_line_y"
-			return {
-				filename = "__ZGroupChange__/graphics/entity/"..pic..".png",
-				priority = "high",
-				width = 64,
-				height = 64,
-				x = 64,
-				scale = 0.5
-			}
+
+  if use_graphics_tunnings then
+	local function set_sprite(pic)
+		local pic = pic or "u_line_y"
+		return {
+			filename = "__ZGroupChange__/graphics/entity/"..pic..".png",
+			priority = "high",
+			width = 64,
+			height = 64,
+			x = 64,
+			scale = 0.5
+		}
 		end
-		
-		if i_exist("green-underground-belt") then
-			data.raw["underground-belt"]["green-underground-belt"].underground_sprite = set_sprite("u_line_g") end
-		if i_exist("purple-underground-belt") then
-			data.raw["underground-belt"]["purple-underground-belt"].underground_sprite = set_sprite("u_line_p") end
-	end
-	
+
+	if i_exist("green-underground-belt") then
+		data.raw["underground-belt"]["green-underground-belt"].underground_sprite = set_sprite("u_line_g") end
+	if i_exist("purple-underground-belt") then
+		data.raw["underground-belt"]["purple-underground-belt"].underground_sprite = set_sprite("u_line_p") end
+  end
 end
 do	--[[logistic]]--
 	aadd("z-logistic-1",		"roboport",							"a")
@@ -965,7 +966,7 @@ do	--[[defense]]--
 	aadd("z-defense-0",			"reinforced-wall",				"b")
 	aadd("z-defense-0",			"reinforced-gate",				"e")
 	
-	if i_exist("bob-gun-turret-2") then 
+	if i_exist("bob-gun-turret-2") then
 		aadd("z-defense-3",			"flamethrower-turret",			"a")
 		aadd("z-defense-3",			"bob-sniper-turret-1",			"b")
 		aadd("z-defense-3",			"bob-sniper-turret-2",			"c")

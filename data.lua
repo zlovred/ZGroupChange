@@ -603,7 +603,7 @@ function zgc.add_newRessource_min_max(main_source, it, mn, mx, pb, it2, mn2, mx2
 		local tree_names = {"green-coral","tree-01","tree-02","tree-02-red","tree-03","tree-04","tree-05","tree-06","tree-06-brown","tree-07","tree-08","tree-08-brown","tree-08-red","tree-09","tree-09-brown","tree-09-red"}
 		for k in pairs(tree_names) do
 			local tree = data.raw.tree[k]
-			if type(tree.minable) == "table" then
+			if tree and type(tree.minable) == "table" then
 				if  zgc.new_ressourse_list[k] == nil then zgc.new_ressourse_list[k] = {} end
 				if type(tree.minable.results) == "table" then
 					for _,v in pairs(tree.minable.results) do

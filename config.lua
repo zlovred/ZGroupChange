@@ -21,7 +21,6 @@ z_balance.dim			= true
 z_balance.bob			= true
 -- Hide items if 5dim version available, ignored otherwise
 -- Change nitroglycerin production line (ammo development)
--- Hide pipes from non-original resources
 -- Hide 5dim modules if bobmodules available. Replace module-case by solder.
 
 z_balance.angels		= true
@@ -51,6 +50,7 @@ z_balance.add_dust		= true	-- Add crushed (Youki) and ore's dust (5dim) to raw m
 z_balance.add_powder	= true	-- Add powdered ores to raw materials (if angel's processing mod enabled)
 z_balance.add_gems		= true	-- Add some minerals to gem ore (if bob ores mod enabled)
 z_balance.bob_inserters	= true	-- Filter out only original and (extra)fast inserters if "bob_inserters" mod enabled
+z_balance.bob_pipes		= true	-- Hide pipes from non-original resources
 z_balance.bob_synthetic	= true	-- Hide synthetic (synthetic-wood, wooden-board-synthetic, etc.)
 z_balance.bob_weaponry	= true	-- Hide weapons, ammo and armored trains
 z_balance.bob_transport	= true	-- Hide armored trains and tanks
