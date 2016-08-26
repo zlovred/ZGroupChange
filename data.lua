@@ -1,7 +1,7 @@
 zgc = zgc or {}
 zgc.cnt = 0
 zgc.itemtypes = {
-	"mining-tool", "repair-tool", "rail-planner", "blueprint-book", "blueprint", "deconstruction-item", "gun", "ammo", "armor","virtual-signal", "module", "tool", "capsule", "selection-tool"}
+	"mining-tool", "repair-tool", "rail-planner", "blueprint-book", "blueprint", "deconstruction-item", "gun", "ammo", "armor","virtual-signal", "module", "tool", "capsule", "selection-tool", "item-with-entity-data"}
 zgc.restrictedtypes = {
 	"assembling-machine","virtual-signal"}
 zgc.brutgroups = {
@@ -150,6 +150,7 @@ end
 
 function zgc.i_get_basic_type(name)
 	
+	if data.raw["item-with-entity-data"][name] then return "item-with-entity-data" end
 	if data.raw.item[name] then return "item" end
 	if data.raw.fluid[name] then return "fluid" end
 	
