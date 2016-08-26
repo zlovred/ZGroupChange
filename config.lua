@@ -1,12 +1,12 @@
 
-use_custom_order = false		-- Set "true" to enable custom order settings. Do not forget to rename template file in ZGroupChange\mods\ from _custom_TEMPLATE.lua >to> _custom_.lua !!
+use_custom_order 		= false		-- Set "true" to enable custom order settings. Do not forget to rename template file in ZGroupChange\mods\ from _custom_TEMPLATE.lua >to> _custom_.lua !!
 
-use_graphics_tunnings = true	-- Enable graphics tunings like better or fixed sprites
+use_graphics_tunnings 	= true		-- Enable graphics tunings like better or fixed sprites
 
 --------------------------------------------------------------------------------------------
 --# Balance changes such hiding items, change ingredients of recipes, technology changes #--
 
-z_balance_Ignore_All = false	-- If true - ignore any of balance settings below
+z_balance_Ignore_All 	= false		-- If true - ignore any of balance settings below
 
 
 -----------------------------------------------------
@@ -19,6 +19,7 @@ z_balance.dim			= true
 -- Change ingredients for transport belts and gold circuit
 
 z_balance.bob			= true
+-- Hide Electronic machines
 -- Hide items if 5dim version available, ignored otherwise
 -- Change nitroglycerin production line (ammo development)
 -- Hide 5dim modules if bobmodules available. Replace module-case by solder.

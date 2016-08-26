@@ -70,9 +70,8 @@ do	--[[production]]--
 end
 do	--[[resources]]--
 	-- bio industries
-	radd("z-chemistry-0",		"bi-cellulose",					"h")
+	radd("z-resources-0",		"bi-cellulose",					"h")
 	
-	-- bio industries
 	aadd("z-resources-1",		"bi-woodpulp",					"a")
 	aadd("z-resources-1",		"bi-ash",						"b")
 	aadd("z-resources-1",		"bi-ash-2",						"c")
@@ -86,7 +85,8 @@ do	--[[resources]]--
 	aadd("z-resources-1",		"bi-crushed-stone",				"j")
 	aadd("z-resources-1",		"carbon",						"k")
 	
-	radd("z-resources-9",		"bi-platic",					"a")
+	aadd("z-resources-8",		"bi-plastic",					"a")
+	
 	
   if i_exist("bi-woodpulp") then
 	if z_balance.add_trees then
@@ -112,8 +112,15 @@ do	--[[liquids]]--
 	aadd("z-liquids-1",			"bi-Fuel_Conversion",			"g")
 	radd("z-liquids-1",			"bi-biomass-0",					"h")
 	aadd("z-liquids-1",			"bi-Bio_Fuel",					"i")
-	radd("z-liquids-2",			"bi-Clean_Air",					"j")
-	radd("z-liquids-2",			"bi-Clean_Air2",				"k")
+	radd("z-liquids-2",			"bi-Clean_Air",					"h")
+	radd("z-liquids-2",			"bi-Clean_Air2",				"i")
+	
+	-- natural evolution
+	aadd("z-liquids-1",			"NE_nutrient-solution",			"j")
+	aadd("z-liquids-1",			"NE_basic-alien-nutrientant",	"j")
+	aadd("z-liquids-2",			"NE_enhanced-nutrient-solution","j")
+	aadd("z-liquids-2",			"NE_enhanced-alien-nutrientant","j")
+	aadd("z-liquids-2",			"NE_alien-revitalization",		"l")
 	
 	-- n-tech chemistry
 	aadd("z-liquids-1",	"basic-desulphurized-oil-processing",	"e")
@@ -178,10 +185,20 @@ do	--[[liquids]]--
 	iadd("z-liquids-9",		"crystal-slurry-in-tanker",			"v")
 	iadd("z-liquids-9",		"thermal-water-in-tanker",			"w")
 	iadd("z-liquids-9",		"mineral-sludge-in-tanker",			"x")
-	iadd("z-liquids-9",		"slag-slurry-in-tanker",			"y")
+	iadd("z-liquids-9",		"slag-slurry-in-tanker",			"y")	
 	iadd("z-liquids-9",		"liquefied-coal-in-tanker",			"z")
 	
 	ihide("liquid-chlor-methane-in-tanker")
+	
+	-- natural evolution
+	iadd("z-liquids-10",	"NE_alien_toxin")
+	iadd("z-liquids-10",	"NE_alien_toxin-in-tanker")
+	iadd("z-liquids-10",	"NE_nutrient-solution-in-tanker")
+	iadd("z-liquids-10",	"NE_basic-alien-nutrientant-in-tanker")
+	iadd("z-liquids-10",	"NE_enhanced-nutrient-solution-in-tanker")
+	iadd("z-liquids-10",	"NE_enhanced-alien-nutrientant-in-tanker")
+	iadd("z-liquids-10",	"NE_alien-revitalization-in-tanker")
+	iadd("z-liquids-10",	"NE_revitalization-solition-in-tanker")
 	
 end
 do	--[[chemistry]]--
@@ -241,9 +258,11 @@ do	--[[chemistry]]--
 end
 do	--[[automatization]]--
 	-- burner filter inserter
-	if i_exist("burner-filter-inserter") then
-		aadd("z-automatization-1",	"burner-filter-inserter",   "a")
-	end
+	aadd("z-automatization-1",	"burner-filter-inserter",	"a")
+	
+	-- natural evolution
+	aadd("z-automatization-2",	"combat-inserter", 			"a")
+	
 end
 do	--[[transport]]--
 	-- belt sorter
@@ -513,12 +532,18 @@ do	--[[module]]--
 	aadd("z-module-0",			"lab-module",					"d")
 end
 do	--[[defense]]--
+	-- natural evolution
+	aadd("z-defense-0",			"ne-living-wall",				"h")
+	aadd("z-defense-0",			"ne-living-wall-refresh",		"i")
+	aadd("z-defense-0",			"ne-living-wall-exhausted",		"j")
+	
 	-- bio industries
 	aadd("z-defense-2",			"bi-wooden-fence",				"a")
 	aadd("z-defense-2",			"Bio_Cannon",					"b")
 	aadd("z-defense-2",			"Bio_Cannon_Area",				"c")
 	aadd("z-defense-2",			"Bio_Cannon_Basic_Ammo",		"d")
 	aadd("z-defense-2",			"Bio_Cannon_Poison_Ammo",		"e")
+	aadd("z-defense-2",			"Bio_Cannon_Bio_Ammo",			"f")
 	
 	-- force field
 	aadd("z-defense-2",			"forcefield-emitter",			"f")
@@ -581,6 +606,9 @@ do	--[[trains-vehicles]]--
 	aadd("z-vehicles-5",		"high-explosive-cannon-shell",	"b")
 end
 do	--[[armor]]--
+	-- bio industries
+	aadd("z-armor-1",			"Biological-bullet-magazine",	"bb")
+	
 	-- afraid of dark
 	aadd("z-armor-5",			"perfect-night-glasses",		"g")
 	
@@ -629,8 +657,36 @@ do	--[[decorative]]--
 	aadd("z-decorative-8",		"concrete-lamppost",			"j")
 	
 end
+do	--[[alien]]--
+	-- natural evolution
+	for _,v in pairs(data.raw["item-subgroup"]) do
+		if v.group == "Natural-Evolution" then v.group = "zgc-alien" end
+	end
+	
+	if i_exist("attractor-on") then
+		aadd("biters",				"attractor-on",				"z")
+		aadd("spitters",			"attractor-off",			"z")
+		aadd("Natural-Evolution",	"Building_Materials",		"0 a")
+	end
+	
+end
 do	--[[atom]]--
+	
 	-- uranium power
+	if i_exist("uranium-hexafluoride") then
+		
+		aadd("uranium-energy-conversion",	"nuclear-fission-reactor-3-by-3",	"g")
+		aadd("uranium-energy-conversion",	"nuclear-fission-reactor-5-by-5",	"h")
+		
+		aadd("uranium-ammo",				"nuclear-fission-reactor-chest-9",	"g")
+		aadd("uranium-ammo",				"nuclear-fission-reactor-chest-25",	"h")
+
+		zgc.add_main_group("atom")
+		for _,v in pairs(data.raw["item-subgroup"]) do
+			if v.group == "uranium" then v.group = "zgc-atom" end
+		end
+	end
+	
 	ihide("yellowcake-in-tanker")
 	ihide("pressurised-water-in-tanker")
 	ihide("fluorine-gas-in-tanker")
@@ -662,6 +718,9 @@ do	--[[other]]--
 	aadd("z-other-1",			"spawn-belt",					"a")
 	aadd("z-other-1",			"void-belt",					"b")
 	
+	-- belt sorter
+	aadd("z-other-1",			"belt-sorter-everythingelse",	"c")
+	
 	if allow_changes and z_balance.other and data.raw.recipe["spawn-belt"] then
 		data.raw.recipe["spawn-belt"].enabled = "false"
 		data.raw.recipe["spawn-belt"].hidden = "false"
@@ -672,28 +731,10 @@ do	--[[other]]--
 	end
 	
 	-- black market
-	aadd("z-other-2",			"ucoin",						"a")
-	aadd("z-other-2",			"trading-chest-buy",			"b")
-	aadd("z-other-2",			"trading-chest-sell",			"c")
-	aadd("z-other-2",			"trading-tank-buy",				"d")
-	aadd("z-other-2",			"trading-tank-sell",			"e")
-	aadd("z-other-2",			"trading-accumulator-buy",		"f")
-	aadd("z-other-2",			"trading-accumulator-sell",		"g")
-	
-	-- uranium power
-	if i_exist("uranium-hexafluoride") then
-		
-		aadd("uranium-energy-conversion",	"nuclear-fission-reactor-3-by-3",	"g")
-		aadd("uranium-energy-conversion",	"nuclear-fission-reactor-5-by-5",	"h")
-		
-		aadd("uranium-ammo",				"nuclear-fission-reactor-chest-9",	"g")
-		aadd("uranium-ammo",				"nuclear-fission-reactor-chest-25",	"h")
-
-		zgc.add_main_group("atom")
-		for _,v in pairs(data.raw["item-subgroup"]) do
-			if v.group == "uranium" then v.group = "zgc-atom" end
-		end
+	for _,v in pairs(data.raw["item-subgroup"]) do
+		if v.group == "black-market-group" then v.group = "zgc-other" end
 	end
+	aadd("z-other-2",			"ucoin",						"a")
 	
 	-- signals
 	if data.raw["item-group"]["signals"] then data.raw["item-group"]["signals"].icon = "__ZGroupChange__/graphics/icons/cat/signals.png" end
