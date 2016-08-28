@@ -11,6 +11,46 @@ do	--[[production]]--
 	aadd("z-production-0",		"electric-stone-furnace",		"d")
 	aadd("z-production-0",		"electric-steel-furnace",		"j")
 	
+	-- mini machines
+	if z_balance.other_mini then
+		aadd("z-production-2",		"mini-furnace",				"b")
+		aadd("z-production-4",		"mini-assembler-1",			"a")
+		aadd("z-production-4",		"mini-assembler-2",			"b")
+		aadd("z-production-4",		"mini-assembler-3",			"c")
+		aadd("z-production-6",		"mini-refinery",			"a")
+		
+		ahide("electric-furnace","mini-furnace")
+		ahide("assembling-machine-1","mini-assembler-1")
+		ahide("assembling-machine-2","mini-assembler-2")
+		ahide("assembling-machine-3","mini-assembler-3")
+		ahide("oil-refinery","mini-refinery")
+		
+		if use_graphics_tunnings then
+			if data.raw["assembling-machine"]["mini-assembler-3"] then
+				data.raw["assembling-machine"]["mini-assembler-3"].animation = {
+					filename = "__ZGroupChange__/graphics/entity/assembling-machine-3-anim.png",
+					priority="high",
+					width = 142,
+					height = 113,
+					frame_count = 32,
+					line_length = 8,
+					shift = {0.84*0.66, -0.1*0.66},
+					scale = 0.66
+				}
+			end
+			zgc.set_icon("mini-assembler-1", "__ZGroupChange__/graphics/icons/assembling-machine-1.png")
+			zgc.set_icon("mini-assembler-2", "__ZGroupChange__/graphics/icons/assembling-machine-2.png")
+			zgc.set_icon("mini-assembler-3", "__ZGroupChange__/graphics/icons/assembling-machine-3.png")
+		end
+		
+	else
+		aadd("z-production-2",		"mini-furnace",				"0a")
+		aadd("z-production-5",		"mini-assembler-1",			"0a")
+		aadd("z-production-5",		"mini-assembler-2",			"0b")
+		aadd("z-production-5",		"mini-assembler-3",			"0c")
+		aadd("z-production-6",		"mini-refinery",			"0a")
+	end
+	
 	-- flare stack
 	aadd("z-production-6",		"vent-stack",					"g")
 	aadd("z-production-6",		"flare-stack",					"h")
@@ -57,6 +97,9 @@ do	--[[production]]--
 	-- tree farm
 	aadd("z-production-9",		"tf-field",						"j")
 	aadd("z-production-9",		"tf-fieldmk2",					"k")
+	
+	-- reverse factory
+	aadd("z-production-10",		"reverse-factory",				"g")
 	
 	-- recycle
 	aadd("z-production-10",		"recycling-machine-1",			"g")

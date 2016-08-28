@@ -35,10 +35,9 @@ do	--[[production]]--
 	aadd("z-production-0",		"5d-masher",				"b")
 	aadd("z-production-0",		"5d-masher-2",				"c")
 	
-	aadd("z-production-2",		"steel-furnace",			"a")
-	aadd("z-production-2",		"5d-furnace",				"b")
-	aadd("z-production-2",		"electric-furnace",			"c")
-	aadd("z-production-2",		"5d-electric-furnace",		"d")
+	aadd("z-production-2",		"5d-furnace",				"a")
+	aadd("z-production-2",		"electric-furnace",			"b")
+	aadd("z-production-2",		"5d-electric-furnace",		"c")
 	
 	aadd("z-production-4",		"assembling-machine-1",		"a")
 	aadd("z-production-4",		"assembling-machine-2",		"b")

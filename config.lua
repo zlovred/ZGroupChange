@@ -58,4 +58,5 @@ z_balance.bob_transport	= true	-- Hide armored trains and tanks
 z_balance.angels_bio	= true	-- Hide bio processing line
 z_balance.youki_pipe	= true	-- Hide Youki's thin pipes and valve
 z_balance.youki_tech	= true	-- Temporary solution while Yuoki have no their own technology
+z_balance.other_mini	= true	-- Replace original factories by their mini-versions (mini-machines mod)
 
