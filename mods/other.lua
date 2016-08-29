@@ -322,6 +322,14 @@ do	--[[transport]]--
 	aadd("z-transport-3",	"compound-splitter-lane",			"g")
 	aadd("z-transport-3",	"compound-splitter-buffer",			"h")
 	
+    -- hacked splitter
+    if i_exist("hacked-splitter") then
+        aadd("z-transport-4",	"hacked-splitter",				"a")
+        aadd("z-transport-4",	"hacked-fast-splitter",			"b")
+        aadd("z-transport-4",	"hacked-express-splitter",		"c")
+        aadd("z-transport-4",	"hacked-green-splitter",		"f")
+        aadd("z-transport-4",	"hacked-purple-splitter",		"g")
+    end
 	-- flow control
 	if allow_changes and i_exist("pipe-elbow") and (i_exist("5d-pipe-mk2") or i_exist("copper-pipe")) then
 		local new_pipes = {}
