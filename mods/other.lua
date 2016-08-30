@@ -333,21 +333,26 @@ do	--[[transport]]--
 	
 	-- flow control
 	if allow_changes and i_exist("pipe-elbow") and (i_exist("5d-pipe-mk2") or i_exist("copper-pipe")) then
+		
 		local new_pipes = {}
+		local pipe_type = "storage-tank"
+		
+		if data.raw["pipe-to-ground"]["pipe-straight"] then pipe_type = "pipe-to-ground" end
+		
 		new_pipes["pipe-copper-straight"] = {
 			item = table.deepcopy(data.raw.item["pipe-straight"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-straight"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-straight"])
+			entity = table.deepcopy(data.raw[pipe_type]["pipe-straight"])
 		}
 		new_pipes["pipe-copper-junction"] = {
 			item = table.deepcopy(data.raw.item["pipe-junction"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-junction"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-junction"])
+			entity = table.deepcopy(data.raw[pipe_type]["pipe-junction"])
 		}
 		new_pipes["pipe-copper-elbow"] = {
 			item = table.deepcopy(data.raw.item["pipe-elbow"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-elbow"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-elbow"])
+			entity = table.deepcopy(data.raw[pipe_type]["pipe-elbow"])
 		}
 		new_pipes["pipe-steel-straight"] = table.deepcopy(new_pipes["pipe-copper-straight"])
 		new_pipes["pipe-steel-junction"] = table.deepcopy(new_pipes["pipe-copper-junction"])
@@ -356,6 +361,7 @@ do	--[[transport]]--
 		local pic1 = "__ZGroupChange__/graphics/icons/pipe-"
 		local pic2 = "__ZGroupChange__/graphics/entity/pipe-"
 		local n = {cs="pipe-copper-straight",cj="pipe-copper-junction",ce="pipe-copper-elbow",ss="pipe-steel-straight",sj="pipe-steel-junction",se="pipe-steel-elbow",pcs="copper-straight.png",pcj="copper-junction.png",pce="copper-elbow.png",pss="steel-straight.png",psj="steel-junction.png",pse="steel-elbow.png"}
+	
 	do -- entity.name / recipe.name / item.name
 		new_pipes[n.cs].entity.name = n.cs
 		new_pipes[n.cj].entity.name = n.cj
@@ -390,6 +396,16 @@ do	--[[transport]]--
 		new_pipes[n.sj].item.icon = pic1..n.psj
 		new_pipes[n.se].item.icon = pic1..n.pse
 	end
+  if pipe_type == "storage-tank" then
+	do -- entity.pictures.picture.sheet.filename
+		new_pipes[n.cs].entity.pictures.picture.sheet.filename = pic2..n.pcs
+		new_pipes[n.cj].entity.pictures.picture.sheet.filename = pic2..n.pcj
+		new_pipes[n.ce].entity.pictures.picture.sheet.filename = pic2..n.pce
+		new_pipes[n.ss].entity.pictures.picture.sheet.filename = pic2..n.pss
+		new_pipes[n.sj].entity.pictures.picture.sheet.filename = pic2..n.psj
+		new_pipes[n.se].entity.pictures.picture.sheet.filename = pic2..n.pse
+	end
+  else
 	do -- entity.pictures.up.filename
 		new_pipes[n.cs].entity.pictures.up.filename = pic2..n.pcs
 		new_pipes[n.cj].entity.pictures.up.filename = pic2..n.pcj
@@ -422,6 +438,7 @@ do	--[[transport]]--
 		new_pipes[n.sj].entity.pictures.right.filename = pic2..n.psj
 		new_pipes[n.se].entity.pictures.right.filename = pic2..n.pse
 	end
+  end
 	do -- entity.minable.result
 		new_pipes[n.cs].entity.minable.result = n.cs
 		new_pipes[n.cj].entity.minable.result = n.cj
@@ -480,9 +497,9 @@ do	--[[transport]]--
 	end
 
 		for k,v in pairs(new_pipes) do data:extend({v.entity,v.recipe,v.item}) end
-		data.raw["pipe-to-ground"]["pipe-straight"].minable.result = "pipe-straight"
-		data.raw["pipe-to-ground"]["pipe-junction"].minable.result = "pipe-junction"
-		data.raw["pipe-to-ground"]["pipe-elbow"].minable.result = "pipe-elbow"
+		data.raw[pipe_type]["pipe-straight"].minable.result = "pipe-straight"
+		data.raw[pipe_type]["pipe-junction"].minable.result = "pipe-junction"
+		data.raw[pipe_type]["pipe-elbow"].minable.result = "pipe-elbow"
 		
 		zgc.t_add_recipe_unlock("logistics-2", "pipe-copper-straight")
 		zgc.t_add_recipe_unlock("logistics-2", "pipe-copper-junction")
@@ -662,6 +679,11 @@ do	--[[armor]]--
 	
 	-- afraid of dark
 	aadd("z-armor-5",			"perfect-night-glasses",		"g")
+	
+	-- teleportation
+	aadd("z-armor-5",			"teleportation-portal",			"h")
+	aadd("z-armor-5",			"teleportation-equipment",		"i")
+	aadd("z-armor-5",			"teleportation-beacon",			"j")
 	
 end
 do	--[[weaponry]]--

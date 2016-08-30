@@ -240,17 +240,17 @@ do	--[[automatization]]--
 
 end
 do	--[[transport]]--
-	aadd("z-transport-5",		"y_flowcheck_10",				"g")
+	aadd("z-transport-6",		"y_flowcheck_10",				"g")
 	
 	if not z_balance.youki_pipe then
-		aadd("z-transport-5",	"y-valve-direction-buffer",		"h")
+		aadd("z-transport-6",	"y-valve-direction-buffer",		"h")
 		
-		aadd("z-transport-13",	"y-pipe-v",						"a")
-		aadd("z-transport-13",	"y-pipe-h",						"b")
-		aadd("z-transport-13",	"y-pipe-hc",					"c")
-		aadd("z-transport-13",	"y-pipe-ec",					"d")
-		aadd("z-transport-13",	"y-pipe-to-ground-hc",			"e")
-		aadd("z-transport-13",	"y-pipe-to-ground-ec",			"f")
+		aadd("z-transport-14",	"y-pipe-v",						"a")
+		aadd("z-transport-14",	"y-pipe-h",						"b")
+		aadd("z-transport-14",	"y-pipe-hc",					"c")
+		aadd("z-transport-14",	"y-pipe-ec",					"d")
+		aadd("z-transport-14",	"y-pipe-to-ground-hc",			"e")
+		aadd("z-transport-14",	"y-pipe-to-ground-ec",			"f")
 		
 		if z_balance.youki_tech then
 			zgc.add_recipe_to_tech("yuoki_liquids", "y-pipe-v")

@@ -124,9 +124,9 @@ do	--[[transport]]--
 	aadd("z-transport-4",		"fast-splitter",			"b")
 	aadd("z-transport-4",		"express-splitter",			"c")
 	
-	aadd("z-transport-8",		"pipe",						"a")
+	aadd("z-transport-9",		"pipe",						"a")
 	
-	aadd("z-transport-9",		"pipe-to-ground",			"a")
+	aadd("z-transport-10",		"pipe-to-ground",			"a")
 	
 	if use_graphics_tunnings then
 		if i_exist("fast-underground-belt") then

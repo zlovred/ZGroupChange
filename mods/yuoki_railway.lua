@@ -1,8 +1,8 @@
 local allow_changes = z_balance.youki_rail
 
 do	--[[transport]]--
-	aadd("z-transport-5",		"y_loco_access-pipe-in",		"e")
-	aadd("z-transport-5",		"y_loco_access-pipe-out",		"f")
+	aadd("z-transport-6",		"y_loco_access-pipe-in",		"e")
+	aadd("z-transport-6",		"y_loco_access-pipe-out",		"f")
 end
 do	--[[energy]]--
 	aadd("z-energy-0",			"yir_fuel_energy",				"g")

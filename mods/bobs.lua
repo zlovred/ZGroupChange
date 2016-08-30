@@ -652,7 +652,7 @@ do	--[[automatization]]--
 
 end
 do	--[[transport]]--
-	aadd("z-transport-5",		"valve",						"a")
+	aadd("z-transport-6",		"valve",						"a")
 
   if allow_changes then
 	if i_exist("5d-mk4-transport-belt") then
@@ -696,11 +696,11 @@ do	--[[transport]]--
 		zgc.r_replace_ingredient_in_all("copper-pipe", "pipe")
 		zgc.r_replace_ingredient_in_all("steel-pipe", "pipe")
 	else
-		aadd("z-transport-8",	"copper-pipe",					"b")
-		aadd("z-transport-8",	"steel-pipe",					"d")
+		aadd("z-transport-9",	"copper-pipe",					"b")
+		aadd("z-transport-9",	"steel-pipe",					"d")
 
-		aadd("z-transport-9",	"copper-pipe-to-ground",		"b")
-		aadd("z-transport-9",	"steel-pipe-to-ground",			"d")
+		aadd("z-transport-10",	"copper-pipe-to-ground",		"b")
+		aadd("z-transport-10",	"steel-pipe-to-ground",			"d")
 	end
 	ahide("stone-pipe")
 	ahide("bronze-pipe")
@@ -733,25 +733,25 @@ do	--[[transport]]--
 		zgc.r_replace_ingredient_in_all("tungsten-pipe", "steel-pipe")
 	end
   else
-	aadd("z-transport-6",	"stone-pipe",					"a")
-	aadd("z-transport-6",	"copper-pipe",					"b")
-	aadd("z-transport-6",	"steel-pipe",					"c")
-	aadd("z-transport-6",	"bronze-pipe",					"d")
-	aadd("z-transport-6",	"plastic-pipe",					"e")
-	aadd("z-transport-6",	"brass-pipe",					"f")
-	aadd("z-transport-6",	"ceramic-pipe",					"g")
-	aadd("z-transport-6",	"titanium-pipe",				"h")
-	aadd("z-transport-6",	"tungsten-pipe",				"i")
+	aadd("z-transport-7",	"stone-pipe",					"a")
+	aadd("z-transport-7",	"copper-pipe",					"b")
+	aadd("z-transport-7",	"steel-pipe",					"c")
+	aadd("z-transport-7",	"bronze-pipe",					"d")
+	aadd("z-transport-7",	"plastic-pipe",					"e")
+	aadd("z-transport-7",	"brass-pipe",					"f")
+	aadd("z-transport-7",	"ceramic-pipe",					"g")
+	aadd("z-transport-7",	"titanium-pipe",				"h")
+	aadd("z-transport-7",	"tungsten-pipe",				"i")
 
-	aadd("z-transport-7",	"stone-pipe-to-ground",			"a")
-	aadd("z-transport-7",	"copper-pipe-to-ground",		"b")
-	aadd("z-transport-7",	"steel-pipe-to-ground",			"c")
-	aadd("z-transport-7",	"bronze-pipe-to-ground",		"d")
-	aadd("z-transport-7",	"plastic-pipe-to-ground",		"e")
-	aadd("z-transport-7",	"brass-pipe-to-ground",			"f")
-	aadd("z-transport-7",	"ceramic-pipe-to-ground",		"g")
-	aadd("z-transport-7",	"titanium-pipe-to-ground",		"h")
-	aadd("z-transport-7",	"tungsten-pipe-to-ground",		"i")
+	aadd("z-transport-8",	"stone-pipe-to-ground",			"a")
+	aadd("z-transport-8",	"copper-pipe-to-ground",		"b")
+	aadd("z-transport-8",	"steel-pipe-to-ground",			"c")
+	aadd("z-transport-8",	"bronze-pipe-to-ground",		"d")
+	aadd("z-transport-8",	"plastic-pipe-to-ground",		"e")
+	aadd("z-transport-8",	"brass-pipe-to-ground",			"f")
+	aadd("z-transport-8",	"ceramic-pipe-to-ground",		"g")
+	aadd("z-transport-8",	"titanium-pipe-to-ground",		"h")
+	aadd("z-transport-8",	"tungsten-pipe-to-ground",		"i")
   end
 
   if use_graphics_tunnings then

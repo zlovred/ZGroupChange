@@ -218,19 +218,19 @@ do	--[[transport]]--
 	aadd("z-transport-4",		"5d-mk4-splitter",						"d")
 	aadd("z-transport-4",		"5d-mk5-splitter",						"e")
 	
-	aadd("z-transport-8",		"5d-pipe-mk2",							"b")
-	aadd("z-transport-8",		"5d-pipe-mk3",							"c")
+	aadd("z-transport-9",		"5d-pipe-mk2",							"b")
+	aadd("z-transport-9",		"5d-pipe-mk3",							"c")
 	
-	aadd("z-transport-9",		"5d-pipe-to-ground-mk2",				"b")
-	aadd("z-transport-9",		"5d-pipe-to-ground-mk3",				"c")
+	aadd("z-transport-10",		"5d-pipe-to-ground-mk2",				"b")
+	aadd("z-transport-10",		"5d-pipe-to-ground-mk3",				"c")
 	
-	aadd("z-transport-10",		"5d-pipe-to-ground-mk1-30",				"a")
-	aadd("z-transport-10",		"5d-pipe-to-ground-mk2-30",				"b")
-	aadd("z-transport-10",		"5d-pipe-to-ground-mk3-30",				"c")
+	aadd("z-transport-11",		"5d-pipe-to-ground-mk1-30",				"a")
+	aadd("z-transport-11",		"5d-pipe-to-ground-mk2-30",				"b")
+	aadd("z-transport-11",		"5d-pipe-to-ground-mk3-30",				"c")
 	
-	aadd("z-transport-11",		"5d-pipe-to-ground-mk1-50",				"a")
-	aadd("z-transport-11",		"5d-pipe-to-ground-mk2-50",				"b")
-	aadd("z-transport-11",		"5d-pipe-to-ground-mk3-50",				"c")
+	aadd("z-transport-12",		"5d-pipe-to-ground-mk1-50",				"a")
+	aadd("z-transport-12",		"5d-pipe-to-ground-mk2-50",				"b")
+	aadd("z-transport-12",		"5d-pipe-to-ground-mk3-50",				"c")
 	
 	if use_graphics_tunnings then
 		local function set_sprite(pic,mk)
