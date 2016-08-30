@@ -322,6 +322,15 @@ do	--[[transport]]--
 	aadd("z-transport-3",	"compound-splitter-lane",			"g")
 	aadd("z-transport-3",	"compound-splitter-buffer",			"h")
 	
+	-- hacked splitter
+	if i_exist("hacked-splitter") then
+		aadd("z-transport-5",	"hacked-splitter",				"a")
+		aadd("z-transport-5",	"hacked-fast-splitter",			"b")
+		aadd("z-transport-5",	"hacked-express-splitter",		"c")
+		aadd("z-transport-5",	"hacked-green-splitter",		"f")
+		aadd("z-transport-5",	"hacked-purple-splitter",		"g")
+	end
+	
 	-- flow control
 	if allow_changes and i_exist("pipe-elbow") and (i_exist("5d-pipe-mk2") or i_exist("copper-pipe")) then
 		local new_pipes = {}
@@ -484,38 +493,38 @@ do	--[[transport]]--
 	end
 	if i_exist("pipe-elbow") then ahide("valve") end
 	
-	aadd("z-transport-5",			"check-valve",				"b")
-	aadd("z-transport-5",			"overflow-valve",			"c")
-	aadd("z-transport-5",			"express-pump",				"d")
+	aadd("z-transport-6",			"check-valve",				"b")
+	aadd("z-transport-6",			"overflow-valve",			"c")
+	aadd("z-transport-6",			"express-pump",				"d")
 	
   if i_not_exist("5d-pipe-mk2") and i_not_exist("copper-pipe") then
-	aadd("z-transport-8",			"pipe-straight",			"d")
-	aadd("z-transport-8",			"pipe-junction",			"e")
-	aadd("z-transport-8",			"pipe-elbow",				"f")
-  elseif allow_changes and i_exist("copper-pipe") and i_not_exist("5d-pipe-mk2") then
-	aadd("z-transport-10",			"pipe-straight",			"a")
-	aadd("z-transport-10",			"pipe-copper-straight",		"b")
-	aadd("z-transport-10",			"pipe-steel-straight",		"c")
-	aadd("z-transport-11",			"pipe-junction",			"a")
-	aadd("z-transport-11",			"pipe-copper-junction",		"b")
-	aadd("z-transport-11",			"pipe-steel-junction",		"c")
-	aadd("z-transport-12",			"pipe-elbow",				"a")
-	aadd("z-transport-12",			"pipe-copper-elbow",		"b")
-	aadd("z-transport-12",			"pipe-steel-elbow",			"c")
-  elseif allow_changes then
 	aadd("z-transport-9",			"pipe-straight",			"d")
-	aadd("z-transport-9",			"pipe-copper-straight",		"e")
-	aadd("z-transport-9",			"pipe-steel-straight",		"f")
-	aadd("z-transport-10",			"pipe-junction",			"d")
-	aadd("z-transport-10",			"pipe-copper-junction",		"e")
-	aadd("z-transport-10",			"pipe-steel-junction",		"f")
-	aadd("z-transport-11",			"pipe-elbow",				"d")
-	aadd("z-transport-11",			"pipe-copper-elbow",		"e")
-	aadd("z-transport-11",			"pipe-steel-elbow",			"f")
+	aadd("z-transport-9",			"pipe-junction",			"e")
+	aadd("z-transport-9",			"pipe-elbow",				"f")
+  elseif allow_changes and i_exist("copper-pipe") and i_not_exist("5d-pipe-mk2") then
+	aadd("z-transport-11",			"pipe-straight",			"a")
+	aadd("z-transport-11",			"pipe-copper-straight",		"b")
+	aadd("z-transport-11",			"pipe-steel-straight",		"c")
+	aadd("z-transport-12",			"pipe-junction",			"a")
+	aadd("z-transport-12",			"pipe-copper-junction",		"b")
+	aadd("z-transport-12",			"pipe-steel-junction",		"c")
+	aadd("z-transport-13",			"pipe-elbow",				"a")
+	aadd("z-transport-13",			"pipe-copper-elbow",		"b")
+	aadd("z-transport-13",			"pipe-steel-elbow",			"c")
+  elseif allow_changes then
+	aadd("z-transport-10",			"pipe-straight",			"d")
+	aadd("z-transport-10",			"pipe-copper-straight",		"e")
+	aadd("z-transport-10",			"pipe-steel-straight",		"f")
+	aadd("z-transport-11",			"pipe-junction",			"d")
+	aadd("z-transport-11",			"pipe-copper-junction",		"e")
+	aadd("z-transport-11",			"pipe-steel-junction",		"f")
+	aadd("z-transport-12",			"pipe-elbow",				"d")
+	aadd("z-transport-12",			"pipe-copper-elbow",		"e")
+	aadd("z-transport-12",			"pipe-steel-elbow",			"f")
   else
-	aadd("z-transport-8",			"pipe-straight",			"d")
-	aadd("z-transport-8",			"pipe-junction",			"e")
-	aadd("z-transport-8",			"pipe-elbow",				"f")
+	aadd("z-transport-9",			"pipe-straight",			"d")
+	aadd("z-transport-9",			"pipe-junction",			"e")
+	aadd("z-transport-9",			"pipe-elbow",				"f")
   end
 	
 	if use_graphics_tunnings and i_exist("small-pump-4") or i_exist("5d-small-pump") then
