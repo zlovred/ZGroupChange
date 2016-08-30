@@ -512,14 +512,7 @@ end
 
 function zgc.find_recipe(item, brute)
 	
-	if not item then return item end
-	
-	local recipe
-	local brute = brute or false
-	
-	if not brute and data.raw.item[item] and data.raw.item[item].group then
-		brute = table.has_value(zgc.brutgroups, data.raw.item[item].group)
-	end
+	if not item or data.raw.recipe[item] then return item end
 	
 	local r_list = {}
 	table.insert(r_list, item)
@@ -543,7 +536,14 @@ function zgc.find_recipe(item, brute)
 		end
 	end
 	
-	if not recipe and brute then
+	local recipe
+	local brute = brute or false
+	
+	if not brute and data.raw.item[item] and data.raw.item[item].group then
+		brute = table.has_value(zgc.brutgroups, data.raw.item[item].group)
+	end
+	
+	if brute then
 		for _name,_data in pairs(data.raw.recipe) do
 			if _data.result then
 				if (type(_data.result) == "table" and _data.result.name == item)

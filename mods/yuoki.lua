@@ -584,6 +584,13 @@ do	--[[youki]]--
 	aadd("z-youki-8",			"y_steam_turbine_mc",			"g")
 	aadd("z-youki-8",			"y_obninsk_mc",					"h")
 	
+	aadd("z-youki-9",			"y-tinylamp",					"a")
+	aadd("z-youki-9",			"y-powerlamp",					"b")
+	aadd("z-youki-9",			"y-lamp-alien",					"c")
+	aadd("z-youki-9",			"y_old_bodenlampe",				"d")
+	aadd("z-youki-9",			"y_lampe_neotix",				"e")
+	aadd("z-youki-9",			"y_lampe_yuoki",				"f")
+	
 	if use_graphics_tunnings then
 		zgc.set_icon("y-battery-rip1-recipe", "__ZGroupChange__/graphics/icons/battery2unicom.png")
 		zgc.set_icon("y_alien_artis1_recipe", "__ZGroupChange__/graphics/icons/artifact2unicom.png")
@@ -617,9 +624,6 @@ do	--[[decorative]]--
 	aadd("z-decorative-4",		"y_lamp_green",					"d")
 	aadd("z-decorative-4",		"y_lamp_blue",					"e")
 	aadd("z-decorative-4",		"y_lamp_yellow",				"f")
-	aadd("z-decorative-4",		"y-tinylamp",					"g")
-	aadd("z-decorative-4",		"y-powerlamp",					"h")
-	aadd("z-decorative-4",		"y-lamp-alien",					"i")
 	
 	aadd("z-decorative-6",		"y_tile_slagfilled",			"a")
 	aadd("z-decorative-6",		"y_tile_slagpattern",			"e")
@@ -1048,6 +1052,12 @@ do	--[[TECH]]--
 			zgc.add_recipe_to_tech("yuoki_energy-2", "y-wooden-brikett-packed-recipe")
 			zgc.add_recipe_to_tech("yuoki_energy-2", "y-coal-stack-recipe")
 			zgc.add_recipe_to_tech("yuoki_energy-2", "y-infused-mud-recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y-tinylamp-recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y-powerlamp-recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y-lamp-alien-recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y_old_bodenlampe_recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y_lampe_neotix_recipe")
+			zgc.add_recipe_to_tech("yuoki_energy-2", "y_lampe_yuoki_recipe")
 			
 			zgc.add_recipe_to_tech("yuoki_energy-3", "y-accumulator-btx-recipe")
 			zgc.add_recipe_to_tech("yuoki_energy-3", "y-accumulator-crystal-m-recipe")
@@ -1243,10 +1253,6 @@ do	--[[TECH]]--
 			zgc.add_recipe_to_tech("yuoki_energy", "y_lamp_blue_recipe")
 			zgc.add_recipe_to_tech("yuoki_energy", "y_lamp_yellow_recipe")
 			zgc.add_recipe_to_tech("yuoki_energy", "yi_bug1_recipe")
-			
-			zgc.add_recipe_to_tech("yuoki_energy-2", "y-tinylamp-recipe")
-			zgc.add_recipe_to_tech("yuoki_energy-2", "y-powerlamp-recipe")
-			zgc.add_recipe_to_tech("yuoki_energy-2", "y-lamp-alien-recipe")
 			
 			zgc.add_recipe_to_tech("yuoki_energy-3", "yi-monument1-recipe")
 		end
