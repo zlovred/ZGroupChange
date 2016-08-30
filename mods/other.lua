@@ -337,17 +337,17 @@ do	--[[transport]]--
 		new_pipes["pipe-copper-straight"] = {
 			item = table.deepcopy(data.raw.item["pipe-straight"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-straight"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-straight"])
+			entity = table.deepcopy(data.raw["storage-tank"]["pipe-straight"])
 		}
 		new_pipes["pipe-copper-junction"] = {
 			item = table.deepcopy(data.raw.item["pipe-junction"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-junction"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-junction"])
+			entity = table.deepcopy(data.raw["storage-tank"]["pipe-junction"])
 		}
 		new_pipes["pipe-copper-elbow"] = {
 			item = table.deepcopy(data.raw.item["pipe-elbow"]),
 			recipe = table.deepcopy(data.raw.recipe["pipe-elbow"]),
-			entity = table.deepcopy(data.raw["pipe-to-ground"]["pipe-elbow"])
+			entity = table.deepcopy(data.raw["storage-tank"]["pipe-elbow"])
 		}
 		new_pipes["pipe-steel-straight"] = table.deepcopy(new_pipes["pipe-copper-straight"])
 		new_pipes["pipe-steel-junction"] = table.deepcopy(new_pipes["pipe-copper-junction"])
@@ -356,133 +356,109 @@ do	--[[transport]]--
 		local pic1 = "__ZGroupChange__/graphics/icons/pipe-"
 		local pic2 = "__ZGroupChange__/graphics/entity/pipe-"
 		local n = {cs="pipe-copper-straight",cj="pipe-copper-junction",ce="pipe-copper-elbow",ss="pipe-steel-straight",sj="pipe-steel-junction",se="pipe-steel-elbow",pcs="copper-straight.png",pcj="copper-junction.png",pce="copper-elbow.png",pss="steel-straight.png",psj="steel-junction.png",pse="steel-elbow.png"}
-	do -- entity.name / recipe.name / item.name
-		new_pipes[n.cs].entity.name = n.cs
-		new_pipes[n.cj].entity.name = n.cj
-		new_pipes[n.ce].entity.name = n.ce
-		new_pipes[n.ss].entity.name = n.ss
-		new_pipes[n.sj].entity.name = n.sj
-		new_pipes[n.se].entity.name = n.se
-		new_pipes[n.cs].recipe.name = n.cs
-		new_pipes[n.cj].recipe.name = n.cj
-		new_pipes[n.ce].recipe.name = n.ce
-		new_pipes[n.ss].recipe.name = n.ss
-		new_pipes[n.sj].recipe.name = n.sj
-		new_pipes[n.se].recipe.name = n.se
-		new_pipes[n.cs].item.name = n.cs
-		new_pipes[n.cj].item.name = n.cj
-		new_pipes[n.ce].item.name = n.ce
-		new_pipes[n.ss].item.name = n.ss
-		new_pipes[n.sj].item.name = n.sj
-		new_pipes[n.se].item.name = n.se
-	end
-	do -- entity.icon / item.icon
-		new_pipes[n.cs].entity.icon = pic1..n.pcs
-		new_pipes[n.cj].entity.icon = pic1..n.pcj
-		new_pipes[n.ce].entity.icon = pic1..n.pce
-		new_pipes[n.ss].entity.icon = pic1..n.pss
-		new_pipes[n.sj].entity.icon = pic1..n.psj
-		new_pipes[n.se].entity.icon = pic1..n.pse
-		new_pipes[n.cs].item.icon = pic1..n.pcs
-		new_pipes[n.cj].item.icon = pic1..n.pcj
-		new_pipes[n.ce].item.icon = pic1..n.pce
-		new_pipes[n.ss].item.icon = pic1..n.pss
-		new_pipes[n.sj].item.icon = pic1..n.psj
-		new_pipes[n.se].item.icon = pic1..n.pse
-	end
-	do -- entity.pictures.up.filename
-		new_pipes[n.cs].entity.pictures.up.filename = pic2..n.pcs
-		new_pipes[n.cj].entity.pictures.up.filename = pic2..n.pcj
-		new_pipes[n.ce].entity.pictures.up.filename = pic2..n.pce
-		new_pipes[n.ss].entity.pictures.up.filename = pic2..n.pss
-		new_pipes[n.sj].entity.pictures.up.filename = pic2..n.psj
-		new_pipes[n.se].entity.pictures.up.filename = pic2..n.pse
-	end
-	do -- entity.pictures.left.filename
-		new_pipes[n.cs].entity.pictures.left.filename = pic2..n.pcs
-		new_pipes[n.cj].entity.pictures.left.filename = pic2..n.pcj
-		new_pipes[n.ce].entity.pictures.left.filename = pic2..n.pce
-		new_pipes[n.ss].entity.pictures.left.filename = pic2..n.pss
-		new_pipes[n.sj].entity.pictures.left.filename = pic2..n.psj
-		new_pipes[n.se].entity.pictures.left.filename = pic2..n.pse
-	end
-	do -- entity.pictures.down.filename
-		new_pipes[n.cs].entity.pictures.down.filename = pic2..n.pcs
-		new_pipes[n.cj].entity.pictures.down.filename = pic2..n.pcj
-		new_pipes[n.ce].entity.pictures.down.filename = pic2..n.pce
-		new_pipes[n.ss].entity.pictures.down.filename = pic2..n.pss
-		new_pipes[n.sj].entity.pictures.down.filename = pic2..n.psj
-		new_pipes[n.se].entity.pictures.down.filename = pic2..n.pse
-	end
-	do -- entity.pictures.right.filename
-		new_pipes[n.cs].entity.pictures.right.filename = pic2..n.pcs
-		new_pipes[n.cj].entity.pictures.right.filename = pic2..n.pcj
-		new_pipes[n.ce].entity.pictures.right.filename = pic2..n.pce
-		new_pipes[n.ss].entity.pictures.right.filename = pic2..n.pss
-		new_pipes[n.sj].entity.pictures.right.filename = pic2..n.psj
-		new_pipes[n.se].entity.pictures.right.filename = pic2..n.pse
-	end
-	do -- entity.minable.result
-		new_pipes[n.cs].entity.minable.result = n.cs
-		new_pipes[n.cj].entity.minable.result = n.cj
-		new_pipes[n.ce].entity.minable.result = n.ce
-		new_pipes[n.ss].entity.minable.result = n.ss
-		new_pipes[n.sj].entity.minable.result = n.sj
-		new_pipes[n.se].entity.minable.result = n.se
-	end
-	do -- entity.fluid_box.base_area
-		new_pipes[n.cs].entity.fluid_box.base_area = 3
-		new_pipes[n.cj].entity.fluid_box.base_area = 3
-		new_pipes[n.ce].entity.fluid_box.base_area = 3
-		new_pipes[n.ss].entity.fluid_box.base_area = 5
-		new_pipes[n.sj].entity.fluid_box.base_area = 5
-		new_pipes[n.se].entity.fluid_box.base_area = 5
-	end
-	do -- recipe.ingredients
-		new_pipes[n.cs].recipe.ingredients = {{"copper-plate",1}}
-		new_pipes[n.cj].recipe.ingredients = {{"copper-plate",1}}
-		new_pipes[n.ce].recipe.ingredients = {{"copper-plate",1}}
-		new_pipes[n.ss].recipe.ingredients = {{"steel-plate",1}}
-		new_pipes[n.sj].recipe.ingredients = {{"steel-plate",1}}
-		new_pipes[n.se].recipe.ingredients = {{"steel-plate",1}}
-	end
-	do -- recipe.result
-		new_pipes[n.cs].recipe.result = n.cs
-		new_pipes[n.cj].recipe.result = n.cj
-		new_pipes[n.ce].recipe.result = n.ce
-		new_pipes[n.ss].recipe.result = n.ss
-		new_pipes[n.sj].recipe.result = n.sj
-		new_pipes[n.se].recipe.result = n.se
-	end
-	do -- recipe.enabled
-		new_pipes[n.cs].recipe.enabled = "false"
-		new_pipes[n.cj].recipe.enabled = "false"
-		new_pipes[n.ce].recipe.enabled = "false"
-		new_pipes[n.ss].recipe.enabled = "false"
-		new_pipes[n.sj].recipe.enabled = "false"
-		new_pipes[n.se].recipe.enabled = "false"
-	end
-	do -- recipe.hidden
-		new_pipes[n.cs].recipe.hidden = "false"
-		new_pipes[n.cj].recipe.hidden = "false"
-		new_pipes[n.ce].recipe.hidden = "false"
-		new_pipes[n.ss].recipe.hidden = "false"
-		new_pipes[n.sj].recipe.hidden = "false"
-		new_pipes[n.se].recipe.hidden = "false"
-	end
-	do -- item.place_result
-		new_pipes[n.cs].item.place_result = n.cs
-		new_pipes[n.cj].item.place_result = n.cj
-		new_pipes[n.ce].item.place_result = n.ce
-		new_pipes[n.ss].item.place_result = n.ss
-		new_pipes[n.sj].item.place_result = n.sj
-		new_pipes[n.se].item.place_result = n.se
-	end
+        do -- entity.name / recipe.name / item.name
+            new_pipes[n.cs].entity.name = n.cs
+            new_pipes[n.cj].entity.name = n.cj
+            new_pipes[n.ce].entity.name = n.ce
+            new_pipes[n.ss].entity.name = n.ss
+            new_pipes[n.sj].entity.name = n.sj
+            new_pipes[n.se].entity.name = n.se
+            new_pipes[n.cs].recipe.name = n.cs
+            new_pipes[n.cj].recipe.name = n.cj
+            new_pipes[n.ce].recipe.name = n.ce
+            new_pipes[n.ss].recipe.name = n.ss
+            new_pipes[n.sj].recipe.name = n.sj
+            new_pipes[n.se].recipe.name = n.se
+            new_pipes[n.cs].item.name = n.cs
+            new_pipes[n.cj].item.name = n.cj
+            new_pipes[n.ce].item.name = n.ce
+            new_pipes[n.ss].item.name = n.ss
+            new_pipes[n.sj].item.name = n.sj
+            new_pipes[n.se].item.name = n.se
+        end
+        do -- entity.icon / item.icon
+            new_pipes[n.cs].entity.icon = pic1..n.pcs
+            new_pipes[n.cj].entity.icon = pic1..n.pcj
+            new_pipes[n.ce].entity.icon = pic1..n.pce
+            new_pipes[n.ss].entity.icon = pic1..n.pss
+            new_pipes[n.sj].entity.icon = pic1..n.psj
+            new_pipes[n.se].entity.icon = pic1..n.pse
+            new_pipes[n.cs].item.icon = pic1..n.pcs
+            new_pipes[n.cj].item.icon = pic1..n.pcj
+            new_pipes[n.ce].item.icon = pic1..n.pce
+            new_pipes[n.ss].item.icon = pic1..n.pss
+            new_pipes[n.sj].item.icon = pic1..n.psj
+            new_pipes[n.se].item.icon = pic1..n.pse
+        end
+        do -- entity.pictures.picture.sheet.filename
+            new_pipes[n.cs].entity.pictures.picture.sheet.filename = pic2..n.pcs
+            new_pipes[n.cj].entity.pictures.picture.sheet.filename = pic2..n.pcj
+            new_pipes[n.ce].entity.pictures.picture.sheet.filename = pic2..n.pce
+            new_pipes[n.ss].entity.pictures.picture.sheet.filename = pic2..n.pss
+            new_pipes[n.sj].entity.pictures.picture.sheet.filename = pic2..n.psj
+            new_pipes[n.se].entity.pictures.picture.sheet.filename = pic2..n.pse
+        end
+        do -- entity.minable.result
+            new_pipes[n.cs].entity.minable.result = n.cs
+            new_pipes[n.cj].entity.minable.result = n.cj
+            new_pipes[n.ce].entity.minable.result = n.ce
+            new_pipes[n.ss].entity.minable.result = n.ss
+            new_pipes[n.sj].entity.minable.result = n.sj
+            new_pipes[n.se].entity.minable.result = n.se
+        end
+        do -- entity.fluid_box.base_area
+            new_pipes[n.cs].entity.fluid_box.base_area = 3
+            new_pipes[n.cj].entity.fluid_box.base_area = 3
+            new_pipes[n.ce].entity.fluid_box.base_area = 3
+            new_pipes[n.ss].entity.fluid_box.base_area = 5
+            new_pipes[n.sj].entity.fluid_box.base_area = 5
+            new_pipes[n.se].entity.fluid_box.base_area = 5
+        end
+        do -- recipe.ingredients
+            new_pipes[n.cs].recipe.ingredients = {{"copper-plate",1}}
+            new_pipes[n.cj].recipe.ingredients = {{"copper-plate",1}}
+            new_pipes[n.ce].recipe.ingredients = {{"copper-plate",1}}
+            new_pipes[n.ss].recipe.ingredients = {{"steel-plate",1}}
+            new_pipes[n.sj].recipe.ingredients = {{"steel-plate",1}}
+            new_pipes[n.se].recipe.ingredients = {{"steel-plate",1}}
+        end
+        do -- recipe.result
+            new_pipes[n.cs].recipe.result = n.cs
+            new_pipes[n.cj].recipe.result = n.cj
+            new_pipes[n.ce].recipe.result = n.ce
+            new_pipes[n.ss].recipe.result = n.ss
+            new_pipes[n.sj].recipe.result = n.sj
+            new_pipes[n.se].recipe.result = n.se
+        end
+        do -- recipe.enabled
+            new_pipes[n.cs].recipe.enabled = "false"
+            new_pipes[n.cj].recipe.enabled = "false"
+            new_pipes[n.ce].recipe.enabled = "false"
+            new_pipes[n.ss].recipe.enabled = "false"
+            new_pipes[n.sj].recipe.enabled = "false"
+            new_pipes[n.se].recipe.enabled = "false"
+        end
+        do -- recipe.hidden
+            new_pipes[n.cs].recipe.hidden = "false"
+            new_pipes[n.cj].recipe.hidden = "false"
+            new_pipes[n.ce].recipe.hidden = "false"
+            new_pipes[n.ss].recipe.hidden = "false"
+            new_pipes[n.sj].recipe.hidden = "false"
+            new_pipes[n.se].recipe.hidden = "false"
+        end
+        do -- item.place_result
+            new_pipes[n.cs].item.place_result = n.cs
+            new_pipes[n.cj].item.place_result = n.cj
+            new_pipes[n.ce].item.place_result = n.ce
+            new_pipes[n.ss].item.place_result = n.ss
+            new_pipes[n.sj].item.place_result = n.sj
+            new_pipes[n.se].item.place_result = n.se
+        end
 
 		for k,v in pairs(new_pipes) do data:extend({v.entity,v.recipe,v.item}) end
-		data.raw["pipe-to-ground"]["pipe-straight"].minable.result = "pipe-straight"
-		data.raw["pipe-to-ground"]["pipe-junction"].minable.result = "pipe-junction"
-		data.raw["pipe-to-ground"]["pipe-elbow"].minable.result = "pipe-elbow"
+		data.raw["storage-tank"]["pipe-straight"].minable.result = "pipe-straight"
+		data.raw["storage-tank"]["pipe-junction"].minable.result = "pipe-junction"
+		data.raw["storage-tank"]["pipe-elbow"].minable.result = "pipe-elbow"
 		
 		zgc.t_add_recipe_unlock("logistics-2", "pipe-copper-straight")
 		zgc.t_add_recipe_unlock("logistics-2", "pipe-copper-junction")
