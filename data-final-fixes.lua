@@ -55,9 +55,7 @@ zgc.add_newRessource_finalize()
 
 if true then
 	z_debug = true
-	log("-----[[ AFTER ]]-----"	)
+--	log("-----[[ AFTER ]]-----"	)
 --	log("[NAMES] => %s",		dumpvar(data.raw, 2, 1))
 --	log("[ALL] => %s",			dumpvar(data.raw, nil, 1))
---	log("[GROUPS] => %s",		dumpvar(data.raw["item-group"],2,0))
-	log("[S_GROUPS] => %s",		dumpvar(data.raw["item-subgroup"],2,0))
 end

@@ -596,6 +596,12 @@ do	--[[energy]]--
 	
 end
 do	--[[module]]--
+	-- science cost tweaker
+	aadd("z-module-0",			"sct-lab-1",					"ab")
+	aadd("z-module-0",			"sct-lab-2",					"ac")
+	aadd("z-module-0",			"sct-lab-3",					"ad")
+	aadd("z-module-0",			"sct-lab-4",					"ae")
+	
 	-- bio industries
 	aadd("z-module-0",			"lab-module",					"d")
 end
@@ -624,6 +630,48 @@ do	--[[defense]]--
 	
 end
 do	--[[intermediate]]--
+	-- science cost tweaker
+	aadd("z-intermediate-3",		"sct-bm4-plating",       	"01")
+	aadd("z-intermediate-3",		"sct-bm4-injector",      	"02")
+	aadd("z-intermediate-3",		"sct-bm4-supercoils",    	"03")
+	aadd("z-intermediate-3",		"sct-bm4-capbank",       	"04")
+	aadd("z-intermediate-3",		"sct-t1-ironcore",       	"05")
+	aadd("z-intermediate-3",		"sct-t1-magnet-coils",   	"06")
+	aadd("z-intermediate-3",		"sct-t2-reaction-nodes", 	"07")
+	aadd("z-intermediate-3",		"sct-t2-instruments",    	"08")
+	aadd("z-intermediate-3",		"sct-t2-microcircuits",  	"09")
+	aadd("z-intermediate-3",		"sct-t2-micro-wafer",    	"10")
+	aadd("z-intermediate-3",		"sct-t2-wafer-stamp",    	"11")
+	aadd("z-intermediate-3",		"sct-t3-flash-fuel",     	"12")
+	aadd("z-intermediate-3",		"sct-t3-laser-foci",     	"13")
+	aadd("z-intermediate-3",		"sct-t3-laser-emitter",  	"14")
+	aadd("z-intermediate-3",		"sct-t3-femto-lasers",   	"15")
+	aadd("z-intermediate-3",		"sct-t3-atomic-sensors", 	"16")
+	aadd("z-intermediate-3",		"sct-t4-bioprocessor",   	"17")
+	aadd("z-intermediate-3",		"sct-t4-overclocker",    	"18")
+	aadd("z-intermediate-3",		"sct-bm4-part1",         	"19")
+	aadd("z-intermediate-3",		"sct-bm4-part1a",        	"20")
+	aadd("z-intermediate-3",		"sct-bm4-part1b",        	"21")
+	aadd("z-intermediate-3",		"sct-bm4-part1c",        	"22")
+	aadd("z-intermediate-3",		"sct-bm4-part2",         	"23")
+	aadd("z-intermediate-3",		"sct-bm4-part2a",        	"24")
+	aadd("z-intermediate-3",		"sct-bm4-part2b",        	"25")
+	aadd("z-intermediate-3",		"sct-bm4-part2c",        	"26")
+	aadd("z-intermediate-3",		"sct-bm4-part3",         	"27")
+	aadd("z-intermediate-3",		"sct-bm4-part3a",        	"28")
+	aadd("z-intermediate-3",		"sct-bm4-part3b",        	"29")
+	aadd("z-intermediate-3",		"sct-bm4-part3c",        	"30")
+	aadd("z-intermediate-3",		"sct-bm4-part3d",        	"31")
+	aadd("z-intermediate-3",		"sct-bm4-part4",         	"32")
+	aadd("z-intermediate-3",		"sct-bm4-part4a",        	"33")
+	aadd("z-intermediate-3",		"sct-bm4-part4b",        	"34")
+	aadd("z-intermediate-3",		"sct-bm4-part4c",        	"35")
+	aadd("z-intermediate-3",		"sct-bm4-part4d",        	"36")
+	aadd("z-intermediate-3",		"sct-bm4-part5",         	"37")
+	aadd("z-intermediate-3",		"sct-bm4-part5a",        	"38")
+	aadd("z-intermediate-3",		"sct-bm4-part5b",        	"39")
+	aadd("z-intermediate-3",		"sct-bm4-part5c",        	"40")
+	aadd("z-intermediate-3",		"sct-bm4-part5d",        	"41")
 	
 	-- bio industries
 	aadd("z-intermediate-6",		"bi-seedling",				"h")

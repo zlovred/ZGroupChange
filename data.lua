@@ -359,6 +359,7 @@ end
 
 
 
+
 function i_exist(item)
 	for _,v in pairs(zgc.name_list) do
 		if v == item then return true end

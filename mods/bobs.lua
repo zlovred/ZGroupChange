@@ -1100,6 +1100,7 @@ do	--[[intermediate]]--
 	aadd("z-intermediate-2",	"solder-alloy",					"d")
 	aadd("z-intermediate-2",	"solder-alloy-lead",			"e")
 	aadd("z-intermediate-2",	"solder",						"f")
+	aadd("z-intermediate-2",	"module-case",					"f")
 	aadd("z-intermediate-2",	"basic-electronic-components",	"g")
 	aadd("z-intermediate-2",	"electronic-components",		"h")
 	aadd("z-intermediate-2",	"intergrated-electronics",		"i")
@@ -1184,6 +1185,19 @@ do	--[[intermediate]]--
 	aadd("z-intermediate-12",	"satellite",					"f")
 	
 	
+	if allow_changes and i_exist("module-case") and i_exist("solder") then
+		ahide("module-case","solder")
+		for tech_name,tech in pairs(data.raw.technology) do
+			if tech.unit.ingredients then
+				for i,ingredient in pairs(tech.unit.ingredients) do
+					if ingredient[1] == "module-case" then
+						data.raw.technology[tech_name].unit.ingredients[i][1] = "solder"
+					end
+				end
+			end
+		end
+	end
+	
 	if use_graphics_tunnings then
 		zgc.set_icon("science-pack-4", "__ZGroupChange__/graphics/icons/science-pack4.png")
 		zgc.set_icon("science-pack-gold", "__ZGroupChange__/graphics/icons/science-pack-gold.png")
@@ -1256,8 +1270,6 @@ do	--[[module]]--
 		ahide("5d-pollution-effectivity-5")
 		ahide("5d-pollution-productivity-5")
 		ahide("5d-effectivity-productivity-5")
-	
-		ahide("module-case","solder")
 	end
 	
 end
