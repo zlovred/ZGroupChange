@@ -17,10 +17,10 @@ zgc.mgq = {
 zgc.new_ressourse_list = {}
 zgc.name_list = {}
 
-_log = log
-function log(msg,...)
+
+function _log(msg,...)
 	if not z_debug then return "" end
-	return _log("[[ZGC]] "..string.format(msg,...))
+	return log("[[ZGC]] "..string.format(msg,...))
 end
 
 function table.merge(tab1, tab2)
@@ -56,7 +56,7 @@ end
 function table.removekey(tab, key)
     local element = tab[key]
     tab[key] = nil
-		log("Remove key %s from [%s] table",key,tostring(tab))
+		_log("Remove key %s from [%s] table",key,tostring(tab))
     return element
 end
 
@@ -239,7 +239,7 @@ function zgc.r_remove_ingredient(recipe, item)
 	if data.raw.recipe[recipe] then
 		zgc.i_remove(data.raw.recipe[recipe].ingredients, item)
 	else
-		log("Recipe %s does not exist.",recipe)
+		_log("Recipe %s does not exist.",recipe)
 	end
 end
 
@@ -258,10 +258,10 @@ function zgc.r_add_new_ingredient(recipe, item)
 		zgc.i_add_new(data.raw.recipe[recipe].ingredients, zgc.i_basic_item(item))
 	else
 		if not data.raw.recipe[recipe] then
-			log("Recipe %s does not exist.",recipe)
+			_log("Recipe %s does not exist.",recipe)
 		end
 		if not zgc.i_get_type(item) then
-			log("Ingredient %s does not exist.",i_basic_item(item).name)
+			_log("Ingredient %s does not exist.",i_basic_item(item).name)
 		end
 	end
 end
@@ -271,10 +271,10 @@ function zgc.r_add_ingredient(recipe, item)
 		zgc.i_add_inc(data.raw.recipe[recipe].ingredients, zgc.i_basic_item(item))
 	else
 		if not data.raw.recipe[recipe] then
-			log("Recipe %s does not exist.",recipe)
+			_log("Recipe %s does not exist.",recipe)
 		end
 		if not zgc.i_get_basic_type(zgc.i_basic_item(item).name) then
-			log("Ingredient %s does not exist.",i_basic_item(item).name)
+			_log("Ingredient %s does not exist.",i_basic_item(item).name)
 		end
 	end
 end
@@ -297,10 +297,10 @@ function zgc.r_replace_ingredient(recipe, old, new)
 		end
 	else
 		if not data.raw.recipe[recipe] then
-			log("Recipe %s does not exist.",recipe)
+			_log("Recipe %s does not exist.",recipe)
 		end
 		if not zgc.i_get_type(new) then
-			log("Ingredient %s does not exist.",new)
+			_log("Ingredient %s does not exist.",new)
 		end
 	end
 end
@@ -312,7 +312,7 @@ function zgc.r_replace_ingredient_in_all(old, new)
 			zgc.r_replace_ingredient(recipe.name, old, new)
 		end
 	else
-		log("Ingredient %s does not exist.",new)
+		_log("Ingredient %s does not exist.",new)
 	end
 end
 
@@ -325,10 +325,10 @@ function zgc.t_add_recipe_unlock(technology, recipe)
 		table.insert(data.raw.technology[technology].effects,{type = "unlock-recipe", recipe = recipe})
 	else
 		if not data.raw.technology[technology] then
-			log("technology %s does not exist.",technology)
+			_log("technology %s does not exist.",technology)
 		end
 		if not data.raw.recipe[recipe] then
-			log("Recipe %s does not exist.",recipe)
+			_log("Recipe %s does not exist.",recipe)
 		end
 	end
 end
@@ -341,7 +341,7 @@ function zgc.t_remove_prerequisite(technology, prerequisite)
 			end
 		end
 	else
-		log("technology %s does not exist.",technology)
+		_log("technology %s does not exist.",technology)
 	end
 end
 
@@ -353,7 +353,7 @@ function zgc.t_remove_recipe_unlock(technology, recipe)
 			end
 		end
 	elseif not data.raw.technology[technology] then
-		log("technology %s does not exist.",technology)
+		_log("technology %s does not exist.",technology)
 	end
 end
 
@@ -387,7 +387,7 @@ function iadd(group,name,order,ico,anim)
 		data.raw[typeof][name].flags = data.raw[typeof][name].oldflags or data.raw[typeof][name].flags
 		if ico then data.raw[typeof][name].icon = ico end
 		if anim then data.raw[typeof][name].animation.filename = anim end
-log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
+_log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
 		return
 		
 	elseif data.raw["fluid"][name] then
@@ -395,7 +395,7 @@ log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
 		data.raw["fluid"][name].order = order
 		data.raw["fluid"][name].flags = data.raw["fluid"][name].oldflags or data.raw["fluid"][name].flags
 		if ico then data.raw["fluid"][name].icon = ico end
-log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
+_log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
 		return
 	end
 	
@@ -405,7 +405,7 @@ log("ADD (%s) %s to %s : %s",string.upper(typeof),name,group,order)
 	data.raw.item[name].flags = data.raw.item[name].oldflags or data.raw.item[name].flags
 	if ico then data.raw.item[name].icon = ico end
 	if anim then data.raw.item[name].animation.filename = anim end
-log("ADD ITEM %s to %s : %s",name,group,order)
+_log("ADD ITEM %s to %s : %s",name,group,order)
 end
 function radd(group,recipe,order,ico)
 
@@ -421,7 +421,7 @@ function radd(group,recipe,order,ico)
 		data.raw.recipe[recipe].order = order
 		data.raw.recipe[recipe].hidden  = false
 		if ico then data.raw.recipe[recipe].icon = ico end
-log("ADD RECIPE %s to %s : %s",recipe,group,order)
+_log("ADD RECIPE %s to %s : %s",recipe,group,order)
 	end
 end
 function aadd(group,name,order,ico,anim,addrecipe)
@@ -440,6 +440,8 @@ function aadd(group,name,order,ico,anim,addrecipe)
 end
 
 function ihide(name,replase,typeof)
+	if z_balance_Prevent_hiding then return end
+	
 	local replase 	= replase or false
 	local typeof 	= typeof or zgc.i_get_type(name) or "item"
 	
@@ -451,12 +453,14 @@ function ihide(name,replase,typeof)
 	
 	--# Replace items
 	if replase then
-log("REPLACE  %s => %s",name,replase)
+_log("REPLACE  %s => %s",name,replase)
 		zgc.r_replace_ingredient_in_all(name, replase)
 	end
 	
 end
 function rhide(name,recipe)
+	if z_balance_Prevent_hiding then return end
+	
 	local recipe = recipe or zgc.find_recipe(name)
 	
 	--# technology
@@ -470,7 +474,7 @@ function rhide(name,recipe)
 		end
 	end
 	if #tech_name > 0 then
-log("[[REMOVE]]  %s from [%s]",name,tech_name)
+_log("[[REMOVE]]  %s from [%s]",name,tech_name)
 		zgc.t_remove_recipe_unlock(tech_name, name)
 	end
 	
@@ -481,6 +485,7 @@ log("[[REMOVE]]  %s from [%s]",name,tech_name)
 	
 end
 function ahide(name,replase)
+	if z_balance_Prevent_hiding then return end
 	
 	local typeof 	= zgc.i_get_type(name) or "item"
 	local replase 	= replase or false
@@ -492,6 +497,8 @@ function ahide(name,replase)
 end
 
 function switch_tech(tname,flag)
+	if z_balance_Prevent_hiding then return end
+	
 	if data.raw.technology[tname] then
 		local flag = flag or false
 		if flag then
@@ -532,7 +539,7 @@ function zgc.find_recipe(item, brute)
 	
 	for _,v in pairs(r_list) do
 		if data.raw.recipe[v] then
-			if item ~= v then log("FIND RECIPE (%s) for %s",v,item) end
+			if item ~= v then _log("FIND RECIPE (%s) for %s",v,item) end
 			return v
 		end
 	end
@@ -549,13 +556,13 @@ function zgc.find_recipe(item, brute)
 			if _data.result then
 				if (type(_data.result) == "table" and _data.result.name == item)
 				or (type(_data.result) == "string" and _data.result == item) then
-					log("BRUTE RECIPE (%s) for %s",_name,item)
+					_log("BRUTE RECIPE (%s) for %s",_name,item)
 					return _name
 				end
 			elseif _data.results and type(_data.results) == "table" then
 				for _,v in pairs(_data.results) do
 					if v.name and v.name == item then
-						log("BRUTE RECIPE (%s) for %s",_name,item)
+						_log("BRUTE RECIPE (%s) for %s",_name,item)
 						return _name
 					end
 				end
@@ -571,13 +578,13 @@ function zgc.add_recipe_to_tech(t,r)
 	local _r = zgc.find_recipe(r)
 	
 	if data.raw.technology[t] and data.raw.recipe[_r] then
-log('RECIPE2TECH  "%s"',_r)
+_log('RECIPE2TECH  "%s"',_r)
 		data.raw.recipe[_r].enabled = false
 		data.raw.technology[t].enabled = true
 		data.raw.technology[t].hidden = false
 		zgc.t_add_recipe_unlock(t,_r)
 	else
-log('[[RECIPE2TECH FAIL]] "%s"',_r)
+_log('[[RECIPE2TECH FAIL]] "%s"',_r)
 	end
 	
 end
@@ -744,7 +751,7 @@ function zgc.get_group_name(name,item)
 	if tonumber(order) then
 		if tonumber(order) < 10 then order = '0'..order end
 	else 
-		log("[get_group_name] tonumber(%s) = %s",name,order or "nil")
+		_log("[get_group_name] tonumber(%s) = %s",name,order or "nil")
 		order = name
 	end
 	
@@ -754,7 +761,7 @@ function zgc.get_group_name(name,item)
 	local main_group = zgc.get_main_group(name)
 	
 	if main_group then
-log("ADD NEW SUB GROUP [%s] for %s",_name,main_group)
+_log("ADD NEW SUB GROUP [%s] for %s",_name,main_group)
 		data.raw["item-subgroup"][_name] = {
 			type = "item-subgroup",
 			name = _name,
@@ -762,7 +769,7 @@ log("ADD NEW SUB GROUP [%s] for %s",_name,main_group)
 			order = order
 		}
 	else
-log("ADD UNKNOWN SUB GROUP [%s] to OTHER (reason: %s)",_name,item)
+_log("ADD UNKNOWN SUB GROUP [%s] to OTHER (reason: %s)",_name,item)
 		data.raw["item-subgroup"][_name] = {
 			type = "item-subgroup",
 			name = _name,

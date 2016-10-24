@@ -472,64 +472,68 @@ do	--[[liquids]]--
 	aadd("z-liquids-0",			"empty-canister",				"b")
 	aadd("z-liquids-0",			"gas-canister",					"c")
 	
-	aadd("z-liquids-1",			"bob-oil-processing",			"a")
-	aadd("z-liquids-1",			"basic-oil-processing",			"b")
-	aadd("z-liquids-1",			"advanced-oil-processing",		"d")
-	aadd("z-liquids-1",			"ground-water",					"e")
+	aadd("z-liquids-1",			"bob-oil-processing",					"a")
+	aadd("z-liquids-1",			"basic-oil-processing",					"b")
+	aadd("z-liquids-1",			"advanced-oil-processing",				"d")
+	aadd("z-liquids-1",			"ground-water",							"e")
+	aadd("z-liquids-1",			"oil-processing-with-sulfur",			"e")
+	aadd("z-liquids-1",			"oil-processing-with-sulfur-dioxide",	"e")
+	aadd("z-liquids-1",			"oil-processing-with-sulfur-dioxide-2",	"e")
+	aadd("z-liquids-1",			"oil-processing-with-sulfur-dioxide-3",	"e")
 	
-	aadd("z-liquids-2",			"water",						"a")
-	aadd("z-liquids-2",			"lithia-water",					"b")
-	aadd("z-liquids-2",			"coal-cracking",				"d")
-	aadd("z-liquids-2",			"liquid-fuel",					"e")
-	aadd("z-liquids-2",			"lubricant",					"f")
-	aadd("z-liquids-2",			"bob-liquid-air",				"g")
+	aadd("z-liquids-3",			"water",						"a")
+	aadd("z-liquids-3",			"lithia-water",					"b")
+	aadd("z-liquids-3",			"coal-cracking",				"d")
+	aadd("z-liquids-3",			"liquid-fuel",					"e")
+	aadd("z-liquids-3",			"lubricant",					"f")
+	aadd("z-liquids-3",			"bob-liquid-air",				"g")
 	
-	aadd("z-liquids-5",			"fill-water-barrel",			"a")
-	aadd("z-liquids-5",			"fill-lithia-water-barrel",		"b")
-	aadd("z-liquids-5",			"fill-crude-oil-barrel",		"ca")
-	aadd("z-liquids-5",			"bob-fill-crude-oil-barrel",	"cb")
-	aadd("z-liquids-5",			"fill-heavy-oil-barrel",		"d")
-	aadd("z-liquids-5",			"fill-light-oil-barrel",		"e")
-	aadd("z-liquids-5",			"fill-lubricant-barrel",		"f")
-	aadd("z-liquids-5",			"fill-sulfuric-acid-barrel",	"g")
-	aadd("z-liquids-5",			"fill-nitric-acid-barrel",		"h")
+	aadd("z-liquids-6",			"fill-water-barrel",			"a")
+	aadd("z-liquids-6",			"fill-lithia-water-barrel",		"b")
+	aadd("z-liquids-6",			"fill-crude-oil-barrel",		"ca")
+	aadd("z-liquids-6",			"bob-fill-crude-oil-barrel",	"cb")
+	aadd("z-liquids-6",			"fill-heavy-oil-barrel",		"d")
+	aadd("z-liquids-6",			"fill-light-oil-barrel",		"e")
+	aadd("z-liquids-6",			"fill-lubricant-barrel",		"f")
+	aadd("z-liquids-6",			"fill-sulfuric-acid-barrel",	"g")
+	aadd("z-liquids-6",			"fill-nitric-acid-barrel",		"h")
 	
-	aadd("z-liquids-6",			"empty-water-barrel",			"a")
-	aadd("z-liquids-6",			"empty-lithia-water-barrel",	"b")
-	aadd("z-liquids-6",			"empty-crude-oil-barrel",		"ca")
-	aadd("z-liquids-6",			"bob-empty-crude-oil-barrel",	"cb")
-	aadd("z-liquids-6",			"empty-heavy-oil-barrel",		"d")
-	aadd("z-liquids-6",			"empty-light-oil-barrel",		"e")
-	aadd("z-liquids-6",			"empty-lubricant-barrel",		"f")
-	aadd("z-liquids-6",			"empty-sulfuric-acid-barrel",	"g")
-	aadd("z-liquids-6",			"empty-nitric-acid-barrel",		"h")
+	aadd("z-liquids-7",			"empty-water-barrel",			"a")
+	aadd("z-liquids-7",			"empty-lithia-water-barrel",	"b")
+	aadd("z-liquids-7",			"empty-crude-oil-barrel",		"ca")
+	aadd("z-liquids-7",			"bob-empty-crude-oil-barrel",	"cb")
+	aadd("z-liquids-7",			"empty-heavy-oil-barrel",		"d")
+	aadd("z-liquids-7",			"empty-light-oil-barrel",		"e")
+	aadd("z-liquids-7",			"empty-lubricant-barrel",		"f")
+	aadd("z-liquids-7",			"empty-sulfuric-acid-barrel",	"g")
+	aadd("z-liquids-7",			"empty-nitric-acid-barrel",		"h")
 	
-	aadd("z-liquids-7",			"water-barrel",					"a")
-	aadd("z-liquids-7",			"lithia-water-barrel",			"b")
-	aadd("z-liquids-7",			"crude-oil-barrel",				"c")
-	aadd("z-liquids-7",			"heavy-oil-barrel",				"d")
-	aadd("z-liquids-7",			"light-oil-barrel",				"e")
-	aadd("z-liquids-7",			"lubricant-barrel",				"f")
-	aadd("z-liquids-7",			"sulfuric-acid-barrel",			"g")
-	aadd("z-liquids-7",			"nitric-acid-barrel",			"h")
+	aadd("z-liquids-8",			"water-barrel",					"a")
+	aadd("z-liquids-8",			"lithia-water-barrel",			"b")
+	aadd("z-liquids-8",			"crude-oil-barrel",				"c")
+	aadd("z-liquids-8",			"heavy-oil-barrel",				"d")
+	aadd("z-liquids-8",			"light-oil-barrel",				"e")
+	aadd("z-liquids-8",			"lubricant-barrel",				"f")
+	aadd("z-liquids-8",			"sulfuric-acid-barrel",			"g")
+	aadd("z-liquids-8",			"nitric-acid-barrel",			"h")
 	
-	aadd("z-liquids-8",			"oxygen-canister",					"a")
-	aadd("z-liquids-8",			"hydrogen-canister",				"b")
-	aadd("z-liquids-8",			"nitrogen-canister",				"c")
-	aadd("z-liquids-8",			"chlorine-canister",				"d")
-	aadd("z-liquids-8",			"hydrogen-chloride-canister",		"e")
-	aadd("z-liquids-8",			"petroleum-gas-canister",			"f")
-	aadd("z-liquids-8",			"liquid-fuel-canister",				"g")
-	aadd("z-liquids-8",			"ferric-chloride-canister",			"h")
+	aadd("z-liquids-9",			"oxygen-canister",					"a")
+	aadd("z-liquids-9",			"hydrogen-canister",				"b")
+	aadd("z-liquids-9",			"nitrogen-canister",				"c")
+	aadd("z-liquids-9",			"chlorine-canister",				"d")
+	aadd("z-liquids-9",			"hydrogen-chloride-canister",		"e")
+	aadd("z-liquids-9",			"petroleum-gas-canister",			"f")
+	aadd("z-liquids-9",			"liquid-fuel-canister",				"g")
+	aadd("z-liquids-9",			"ferric-chloride-canister",			"h")
 	
-	aadd("z-liquids-9",			"empty-oxygen-canister",			"a")
-	aadd("z-liquids-9",			"empty-hydrogen-canister",			"b")
-	aadd("z-liquids-9",			"empty-nitrogen-canister",			"c")
-	aadd("z-liquids-9",			"empty-chlorine-canister",			"d")
-	aadd("z-liquids-9",			"empty-hydrogen-chloride-canister",	"e")
-	aadd("z-liquids-9",			"empty-petroleum-gas-canister",		"f")
-	aadd("z-liquids-9",			"empty-liquid-fuel-canister",		"g")
-	aadd("z-liquids-9",			"empty-ferric-chloride-canister",	"h")
+	aadd("z-liquids-10",			"empty-oxygen-canister",			"a")
+	aadd("z-liquids-10",			"empty-hydrogen-canister",			"b")
+	aadd("z-liquids-10",			"empty-nitrogen-canister",			"c")
+	aadd("z-liquids-10",			"empty-chlorine-canister",			"d")
+	aadd("z-liquids-10",			"empty-hydrogen-chloride-canister",	"e")
+	aadd("z-liquids-10",			"empty-petroleum-gas-canister",		"f")
+	aadd("z-liquids-10",			"empty-liquid-fuel-canister",		"g")
+	aadd("z-liquids-10",			"empty-ferric-chloride-canister",	"h")
 	
 end
 do	--[[chemistry]]--
@@ -1032,44 +1036,44 @@ do	--[[armor]]--
 	aadd("z-armor-4",			"bob-power-armor-mk4",				"i")
 	aadd("z-armor-4",			"bob-power-armor-mk5",				"j")
 	
-	aadd("z-armor-5",			"exoskeleton-equipment",			"a")
-	aadd("z-armor-5",			"exoskeleton-equipment-2",			"b")
-	aadd("z-armor-5",			"exoskeleton-equipment-3",			"c")
-	aadd("z-armor-5",			"night-vision-equipment",			"d")
-	aadd("z-armor-5",			"night-vision-equipment-2",			"e")
-	aadd("z-armor-5",			"night-vision-equipment-3",			"f")
-	aadd("z-armor-5",			"personal-roboport-equipment",		"h")
+	aadd("z-armor-7",			"exoskeleton-equipment",			"a")
+	aadd("z-armor-7",			"exoskeleton-equipment-2",			"b")
+	aadd("z-armor-7",			"exoskeleton-equipment-3",			"c")
+	aadd("z-armor-7",			"night-vision-equipment",			"d")
+	aadd("z-armor-7",			"night-vision-equipment-2",			"e")
+	aadd("z-armor-7",			"night-vision-equipment-3",			"f")
+	aadd("z-armor-7",			"personal-roboport-equipment",		"h")
 	
-	aadd("z-armor-6",			"solar-panel-equipment",			"a")
-	aadd("z-armor-6",			"solar-panel-equipment-2",			"b")
-	aadd("z-armor-6",			"solar-panel-equipment-3",			"c")
-	aadd("z-armor-6",			"solar-panel-equipment-4",			"d")
-	aadd("z-armor-6",			"fusion-reactor-equipment",			"e")
-	aadd("z-armor-6",			"fusion-reactor-equipment-2",		"f")
-	aadd("z-armor-6",			"fusion-reactor-equipment-3",		"g")
-	aadd("z-armor-6",			"fusion-reactor-equipment-4",		"h")
+	aadd("z-armor-8",			"solar-panel-equipment",			"a")
+	aadd("z-armor-8",			"solar-panel-equipment-2",			"b")
+	aadd("z-armor-8",			"solar-panel-equipment-3",			"c")
+	aadd("z-armor-8",			"solar-panel-equipment-4",			"d")
+	aadd("z-armor-8",			"fusion-reactor-equipment",			"e")
+	aadd("z-armor-8",			"fusion-reactor-equipment-2",		"f")
+	aadd("z-armor-8",			"fusion-reactor-equipment-3",		"g")
+	aadd("z-armor-8",			"fusion-reactor-equipment-4",		"h")
 	
-	aadd("z-armor-7",			"battery-equipment",				"a")
-	aadd("z-armor-7",			"battery-mk2-equipment",			"b")
-	aadd("z-armor-7",			"battery-mk3-equipment",			"c")
-	aadd("z-armor-7",			"battery-mk4-equipment",			"d")
-	aadd("z-armor-7",			"battery-mk5-equipment",			"e")
-	aadd("z-armor-7",			"battery-mk6-equipment",			"f")
+	aadd("z-armor-9",			"battery-equipment",				"a")
+	aadd("z-armor-9",			"battery-mk2-equipment",			"b")
+	aadd("z-armor-9",			"battery-mk3-equipment",			"c")
+	aadd("z-armor-9",			"battery-mk4-equipment",			"d")
+	aadd("z-armor-9",			"battery-mk5-equipment",			"e")
+	aadd("z-armor-9",			"battery-mk6-equipment",			"f")
 	
-	aadd("z-armor-8",		   "personal-laser-defense-equipment",  "a")
-	aadd("z-armor-8",		   "personal-laser-defense-equipment-2","b")
-	aadd("z-armor-8",		   "personal-laser-defense-equipment-3","c")
-	aadd("z-armor-8",		   "personal-laser-defense-equipment-4","d")
-	aadd("z-armor-8",		   "personal-laser-defense-equipment-5","e")
-	aadd("z-armor-8",		   "personal-laser-defense-equipment-6","f")
-	aadd("z-armor-8",		   "discharge-defense-equipment",		"g")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment",  "a")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment-2","b")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment-3","c")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment-4","d")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment-5","e")
+	aadd("z-armor-10",		   "personal-laser-defense-equipment-6","f")
+	aadd("z-armor-10",		   "discharge-defense-equipment",		"g")
 	
-	aadd("z-armor-9",			"energy-shield-equipment",			"a")
-	aadd("z-armor-9",			"energy-shield-mk2-equipment",		"b")
-	aadd("z-armor-9",			"energy-shield-mk3-equipment",		"c")
-	aadd("z-armor-9",			"energy-shield-mk4-equipment",		"d")
-	aadd("z-armor-9",			"energy-shield-mk5-equipment",		"e")
-	aadd("z-armor-9",			"energy-shield-mk6-equipment",		"f")
+	aadd("z-armor-11",			"energy-shield-equipment",			"a")
+	aadd("z-armor-11",			"energy-shield-mk2-equipment",		"b")
+	aadd("z-armor-11",			"energy-shield-mk3-equipment",		"c")
+	aadd("z-armor-11",			"energy-shield-mk4-equipment",		"d")
+	aadd("z-armor-11",			"energy-shield-mk5-equipment",		"e")
+	aadd("z-armor-11",			"energy-shield-mk6-equipment",		"f")
 	
 	if allow_changes then
 		ahide("laser-beam-rifle")
@@ -1081,10 +1085,6 @@ do	--[[armor]]--
 	
 end
 do	--[[intermediate]]--
-	
-	aadd("z-intermediate-0",	"science-pack-4",				"d")
-	aadd("z-intermediate-0",	"alien-science-pack",			"e")
-	aadd("z-intermediate-0",	"science-pack-gold",			"f")
 	
 	if i_exist("basic-circuit-board") then
 	aadd("z-intermediate-1",	"basic-circuit-board",			"a")
@@ -1224,6 +1224,10 @@ do	--[[module]]--
 	aadd("z-module-0",			"beacon-2",					"f")
 	aadd("z-module-0",			"beacon-3",					"g")
 	
+	aadd("z-module-1",			"science-pack-4",				"d")
+	aadd("z-module-1",			"alien-science-pack",			"e")
+	aadd("z-module-1",			"science-pack-gold",			"f")
+	
 	if data.raw["item-subgroup"]["speed-module"] then
 		aadd("speed-module",		"speed-module",				"a")
 		aadd("speed-module",		"speed-module-2",			"b")
@@ -1359,8 +1363,16 @@ do	--[[weaponry]]--
 		aadd("z-weaponry-9",	"bob-poison-rocket",			"f")
 		aadd("z-weaponry-9",	"bob-electric-rocket",			"g")
 		
+		zgc.get_group_name("z-weaponry-11","")
+		for _,recipe in pairs(data.raw.item) do
+			if recipe.subgroup == "vehicle-equipment" then
+				recipe.subgroup = "zgc-weaponry-11"
+			end
+		end
+		
 		
 		if i_exist("cordite") then
+			data.raw.recipe["cordite"].category = "chemistry"
 			data.raw.recipe["cordite"].ingredients = {}
 			data.raw.recipe["cordite"].ingredients =
 			{
@@ -1498,6 +1510,17 @@ do	--[[weaponry]]--
 	
 end
 do	--[[trains-vehicles]]--
+		aadd("z-trains-0",			"bob-diesel-locomotive-2",		"f")
+		aadd("z-trains-0",			"bob-diesel-locomotive-3",		"g")
+		aadd("z-trains-0",			"bob-armoured-diesel-locomotive","h")
+		
+		aadd("z-trains-1",			"bob-cargo-wagon-2",			"f")
+		aadd("z-trains-1",			"bob-cargo-wagon-3",			"g")
+		aadd("z-trains-1",			"bob-armoured-cargo-wagon",		"h")
+		
+		aadd("z-vehicles-0",		"bob-tank-2",					"f")
+		aadd("z-vehicles-0",		"bob-tank-3",					"g")
+		
 	if not z_balance.bob_transport then
 		aadd("z-trains-0",			"armoured-diesel-locomotive",	"b")
 		aadd("z-trains-0",			"diesel-locomotive-2",			"d")
@@ -1558,6 +1581,7 @@ do	--[[trains-vehicles]]--
 	end
 	
 	ahide("combat-robot-dispenser-equipment")
+	
 end
 do	--[[alien]]--
 	aadd("z-alien-7",			"alien-acid",					"a")

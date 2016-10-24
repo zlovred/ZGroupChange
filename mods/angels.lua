@@ -1,5 +1,13 @@
 local allow_changes = z_balance.angels
 
+do	--[[gathering]]--
+	aadd("z-gathering-2",		"angels-warehouse",					"e")
+	aadd("z-gathering-2",		"angels-warehouse-storage",			"f")
+	aadd("z-gathering-2",		"angels-warehouse-requester",		"g")
+	aadd("z-gathering-2",		"angels-warehouse-passive-provider","h")
+	aadd("z-gathering-2",		"angels-warehouse-active-provider",	"i")
+	
+end
 do	--[[production]]--
 	
 	aadd("z-production-1",		"ore-processing-plant",			"a")
@@ -220,9 +228,9 @@ do	--[[plates]]--
 	end
 end
 do	--[[liquids]]--
-	aadd("z-liquids-2",		"thermal-water-barrel",				"i")
-	aadd("z-liquids-5",		"fill-thermal-water-barrel",		"i")
-	aadd("z-liquids-6",		"empty-thermal-water-barrel",		"i")
+	aadd("z-liquids-3",		"thermal-water-barrel",				"i")
+	aadd("z-liquids-6",		"fill-thermal-water-barrel",		"i")
+	aadd("z-liquids-7",		"empty-thermal-water-barrel",		"i")
 end
 do	--[[chemistry]]--
 	aadd("z-chemistry-0",		"tungstic-acid",				"h")
@@ -292,13 +300,13 @@ do	--[[alien]]--
 	aadd("z-alien-5",	"alien-artifact-blue",				"f")
 	aadd("z-alien-5",	"alien-artifact-purple",			"g")
 	
-	aadd("z-alien-6",	"petri-dish",						"a")
-	aadd("z-alien-6",	"substrate-dish",					"b")
-	aadd("z-alien-6",	"alien-pre-artifact",				"c")
-	aadd("z-alien-6",	"alien-bacteria",					"d")
-	aadd("z-alien-6",	"alien-goo",						"e")
-	aadd("z-alien-6",	"alien-orange-alloy",				"f")
-	aadd("z-alien-6",	"alien-blue-alloy",					"g")
+	aadd("z-alien-6",	"petri-dish",						"b")
+	aadd("z-alien-6",	"substrate-dish",					"c")
+	aadd("z-alien-6",	"alien-pre-artifact",				"d")
+	aadd("z-alien-6",	"alien-bacteria",					"e")
+	aadd("z-alien-6",	"alien-goo",						"f")
+	aadd("z-alien-6",	"alien-orange-alloy",				"g")
+	aadd("z-alien-6",	"alien-blue-alloy",					"h")
 	
 end
 do	--[[decorative]]--

@@ -59,6 +59,7 @@ do	--[[gathering]]--
 	aadd("z-gathering-9",		"y-water-gen",					"a")
 	aadd("z-gathering-9",		"y-water-gen-e",				"b")
 	aadd("z-gathering-9",		"y-water-gen-recipe-e",			"b")
+	aadd("z-gathering-9",		"y_water_mixer",				"b")
 	aadd("z-gathering-9",		"water-miner-1",				"c")
 	
 	ahide("water-miner-2")
@@ -156,7 +157,7 @@ do	--[[liquids]]--
 				results = {{type="fluid",name="lithia-water",amount=140}},
 				main_product = "lithia-water",
 				hidden = false,
-				subgroup = "z-liquids-2",
+				subgroup = "z-liquids-3",
 				order = "b"
 			},
 		})
@@ -166,13 +167,15 @@ do	--[[liquids]]--
 		end
 	end
 		
-	aadd("z-liquids-2",			"y-water-gen-fluid-recipe",		"a")
-	aadd("z-liquids-2",			"z-lithia-water",				"b")
 	aadd("z-liquids-0",			"liquid-air",					"f")
-	aadd("z-liquids-2",			"bob-liquid-air",				"g")
 	
-	aadd("z-liquids-4",			"y-con_water",					"k")
-	aadd("z-liquids-4",			"y-liquid-uc2",					"l")
+	aadd("z-liquids-3",			"y-water-gen-fluid-recipe",		"a")
+	aadd("z-liquids-3",			"z-lithia-water",				"b")
+	aadd("z-liquids-3",			"bob-liquid-air",				"g")
+	aadd("z-liquids-3",			"y_water_mix",					"j")
+	
+	aadd("z-liquids-5",			"y-con_water",					"k")
+	aadd("z-liquids-5",			"y-liquid-uc2",					"l")
 	
 	if use_graphics_tunnings then
 		zgc.set_icon("y-con_water", "__ZGroupChange__/graphics/icons/y-con-water.png")
@@ -407,6 +410,10 @@ do	--[[defense]]--
 		aadd("z-defense-8",		"yi_radar",						"g")
 	end
 end
+do	--[[alien]]--
+	aadd("z-alien-6",	"y-alien-artifact-recipe",			"a")
+	
+end
 do	--[[intermediate]]--
 	aadd("z-intermediate-7",	"y-battery-single-use1",		"d")
 	aadd("z-intermediate-7",	"y-battery-single-use2",		"e")
@@ -602,21 +609,38 @@ end
 do	--[[module]]--
 	aadd("z-module-0",			"yi_beacon",					"h")
 	
-	aadd("z-module-1",			"y-speed-module-1",				"a")
-	aadd("z-module-1",			"y_modul_blue1-recipe",			"a")
-	aadd("z-module-1",			"y-speed-module-2",				"b")
-	aadd("z-module-1",			"y_modul_blue2-recipe",			"b")
-	aadd("z-module-1",			"y-green-module-1",				"c")
-	aadd("z-module-1",			"y_modul_green1_recipe",		"c")
-	aadd("z-module-1",			"y-green-module-2",				"d")
-	aadd("z-module-1",			"y_modul_green2_recipe",		"d")
-	aadd("z-module-1",			"y_modul_green_op",				"e")
+	aadd("z-module-2",			"y-speed-module-1",				"a")
+	aadd("z-module-2",			"y_modul_blue1-recipe",			"a")
+	aadd("z-module-2",			"y-speed-module-2",				"b")
+	aadd("z-module-2",			"y_modul_blue2-recipe",			"b")
+	aadd("z-module-2",			"y-green-module-1",				"c")
+	aadd("z-module-2",			"y_modul_green1_recipe",		"c")
+	aadd("z-module-2",			"y-green-module-2",				"d")
+	aadd("z-module-2",			"y_modul_green2_recipe",		"d")
+	aadd("z-module-2",			"y_modul_green_op",				"e")
 	
-	aadd("z-module-2",			"y_modul_red1",					"a")
-	aadd("z-module-2",			"y_modul_red2",					"b")
-	aadd("z-module-2",			"y-pink-module-1",				"c")
-	aadd("z-module-2",			"y-pink-module-2",				"d")
-	aadd("z-module-2",			"y-pink-module-3",				"e")
+	aadd("z-module-3",			"y_modul_red1",					"a")
+	aadd("z-module-3",			"y_modul_red2",					"b")
+	aadd("z-module-3",			"y-pink-module-1",				"c")
+	aadd("z-module-3",			"y-pink-module-2",				"d")
+	aadd("z-module-3",			"y-pink-module-3",				"e")
+	
+end
+do	--[[armor]]--
+	aadd("z-armor-5",			"yi_armor_gray",			"a")
+	aadd("z-armor-5",			"yi_armor_red",				"b")
+	aadd("z-armor-5",			"yi_armor_gold",			"c")
+	aadd("z-armor-5",			"yi_walker_a",				"d")
+	aadd("z-armor-5",			"yi_walker_c",				"e")
+			
+	aadd("z-armor-6",			"yi_equip_shield_a",		"a")
+	aadd("z-armor-6",			"yi_equip_battery_a",		"b")
+	aadd("z-armor-6",			"yi_equip_generator_a",		"c")
+	aadd("z-armor-6",			"yi_equip_legs_a",			"d")
+	aadd("z-armor-6",			"yi_minigun",				"e")
+	aadd("z-armor-6",			"yi_equip_shield_b",		"f")
+	aadd("z-armor-6",			"yi_lasergun",				"h")
+	aadd("z-armor-6",			"yi_ammo_energie",			"i")
 	
 end
 do	--[[decorative]]--
@@ -973,6 +997,8 @@ do	--[[TECH]]--
 			zgc.add_recipe_to_tech("yuoki_liquids", "y_buffer_station")
 			
 			zgc.add_recipe_to_tech("yuoki_liquids-2", "y-water-gen-recipe-e")
+			zgc.add_recipe_to_tech("yuoki_liquids-2", "y_water_mixer_recipe")
+			
 			zgc.add_recipe_to_tech("yuoki_liquids-3", "y-tank-24k")
 			
 			zgc.add_recipe_to_tech("yuoki_atomics-3", "y_repair_quantrinum-recipe")
@@ -1005,6 +1031,7 @@ do	--[[TECH]]--
 			zgc.add_recipe_to_tech("yuoki_liquids", "y_rawsyngas1_recipe")
 			zgc.add_recipe_to_tech("yuoki_liquids", "y_rawsyngas2_recipe")
 			zgc.add_recipe_to_tech("yuoki_liquids", "y_refinehydrogen_recipe")
+			zgc.add_recipe_to_tech("yuoki_liquids-2", "y_water_mix_recipe")
 		end
 		do	--# automatization
 			zgc.add_recipe_to_tech("yuoki_industries-2", "y-inserter-s4-recipe")
@@ -1242,6 +1269,22 @@ do	--[[TECH]]--
 			zgc.add_recipe_to_tech("yuoki_industries-3", "y-pink-module-3-recipe")
 			
 			zgc.add_recipe_to_tech("yuoki_industries-4", "y_modul_green_op_recipe")
+		end
+		do	--# armor
+			zgc.add_recipe_to_tech("yuoki_def", "yi_armor_gray_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_armor_red_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_armor_gold_recipe")
+			zgc.add_recipe_to_tech("yuoki_def-2", "yi_walker_a_recipe")
+			zgc.add_recipe_to_tech("yuoki_def-3", "yi_walker_c_recipe")
+			
+			zgc.add_recipe_to_tech("yuoki_def", "yi_equip_shield_a_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_equip_battery_a_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_equip_generator_a_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_equip_legs_a_recipe")
+			zgc.add_recipe_to_tech("yuoki_def", "yi_minigun_recipe")
+			zgc.add_recipe_to_tech("yuoki_def-2", "yi_equip_shield_b_recipe")
+			zgc.add_recipe_to_tech("yuoki_def-2", "yi_lasergun_recipe")
+			zgc.add_recipe_to_tech("yuoki_def-2", "yi_ammo_energie_recipe")
 		end
 		do	--# decorative
 			zgc.add_recipe_to_tech("yuoki_industries", "y_tile_slagfilled_recipe")

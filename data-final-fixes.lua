@@ -7,7 +7,7 @@ require("config")
 for k,v in pairs(z_balance) do z_balance[k] = not z_balance_Ignore_All and v end
 if not data.raw["custom-input"] or not data.raw["custom-input"]["bob-inserter-drop-range"] then z_balance.bob_inserters = false end
 
-log("Balance: %s",dumpvar(z_balance))
+_log("Balance: %s",dumpvar(z_balance))
 
 --# generate name list
 for k,v in pairs(data.raw) do if type(v) == "table" then
@@ -45,7 +45,7 @@ elseif	zgc.ig("refining")												and	zgc.ig("atom")	then que = {"refining","
 elseif							zgc.ig("youki")							 					then que = {"resources","plates","liquids","chemistry","alien","youki","parts","module","armor","weaponry","decorative","other"}
 elseif	zgc.ig("refining")																	then que = {"refining","resources","plates","liquids","chemistry","armor","weaponry","module","alien","decorative","other"}
 elseif																		zgc.ig("atom")	then que = {"resources","plates","liquids","chemistry","alien","armor","weaponry","atom","module","decorative","other"}
-else																								 que = {"resources","plates","liquids","chemistry","alien","armor","weaponry","module","decorative","other"}
+else																							 que = {"resources","plates","liquids","chemistry","alien","armor","weaponry","module","decorative","other"}
 end
 
 --# final tunning
@@ -55,7 +55,7 @@ zgc.add_newRessource_finalize()
 
 if true then
 	z_debug = true
---	log("-----[[ AFTER ]]-----"	)
---	log("[NAMES] => %s",		dumpvar(data.raw, 2, 1))
---	log("[ALL] => %s",			dumpvar(data.raw, nil, 1))
+--	_log("-----[[ AFTER ]]-----"	)
+--	_log("[NAMES] => %s",		dumpvar(data.raw, 2, 1))
+--	_log("[ALL] => %s",			dumpvar(data.raw, nil, 1))
 end

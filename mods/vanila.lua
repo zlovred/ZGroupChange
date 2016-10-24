@@ -77,13 +77,13 @@ do	--[[liquids]]--
 	
 	aadd("z-liquids-1",			"fill-crude-oil-barrel",	"a")
 	
-	aadd("z-liquids-2",			"empty-crude-oil-barrel",	"a")
-	aadd("z-liquids-2",			"lubricant",				"b")
+	aadd("z-liquids-3",			"empty-crude-oil-barrel",	"a")
+	aadd("z-liquids-3",			"lubricant",				"b")
 	
-	aadd("z-liquids-3",			"crude-oil-barrel",			"a")
+	aadd("z-liquids-4",			"crude-oil-barrel",			"a")
 	
-	aadd("z-liquids-4",			"basic-oil-processing",		"b")
-	aadd("z-liquids-4",			"advanced-oil-processing",	"c")
+	aadd("z-liquids-5",			"basic-oil-processing",		"b")
+	aadd("z-liquids-5",			"advanced-oil-processing",	"c")
 	
 end
 do	--[[chemistry]]--
@@ -234,24 +234,19 @@ do	--[[armor]]--
 	aadd("z-armor-4",			"night-vision-equipment",			"b")
 	aadd("z-armor-4",			"personal-roboport-equipment",		"c")
 	
-	aadd("z-armor-5",			"solar-panel-equipment",			"a")
-	aadd("z-armor-5",			"fusion-reactor-equipment",			"b")
-	aadd("z-armor-5",			"battery-equipment",				"c")
-	aadd("z-armor-5",			"battery-mk2-equipment",			"d")
+	aadd("z-armor-7",			"solar-panel-equipment",			"a")
+	aadd("z-armor-7",			"fusion-reactor-equipment",			"b")
+	aadd("z-armor-7",			"battery-equipment",				"c")
+	aadd("z-armor-7",			"battery-mk2-equipment",			"d")
 	
-	aadd("z-armor-6",			"personal-laser-defense-equipment",	"a")
-	aadd("z-armor-6",			"discharge-defense-equipment",		"b")
+	aadd("z-armor-8",			"personal-laser-defense-equipment",	"a")
+	aadd("z-armor-8",			"discharge-defense-equipment",		"b")
 	
-	aadd("z-armor-7",			"energy-shield-equipment",			"a")
-	aadd("z-armor-7",			"energy-shield-mk2-equipment",		"b")
+	aadd("z-armor-9",			"energy-shield-equipment",			"a")
+	aadd("z-armor-9",			"energy-shield-mk2-equipment",		"b")
 	
 end
-do	--[[intermediate]]--
-	aadd("z-intermediate-0",	"science-pack-1",			"a")
-	aadd("z-intermediate-0",	"science-pack-2",			"b")
-	aadd("z-intermediate-0",	"science-pack-3",			"c")
-	aadd("z-intermediate-0",	"alien-science-pack",		"d")
-	
+do	--[[intermediate]]--	
 	aadd("z-intermediate-1",	"electronic-circuit",		"b")
 	aadd("z-intermediate-1",	"advanced-circuit",			"d")
 	aadd("z-intermediate-1",	"processing-unit",			"f")
@@ -281,17 +276,22 @@ do	--[[module]]--
 	aadd("z-module-0",			"lab",						"a")
 	aadd("z-module-0",			"beacon",					"e")
 	
-	aadd("z-module-3",			"speed-module",				"a")
-	aadd("z-module-3",			"speed-module-2",			"b")
-	aadd("z-module-3",			"speed-module-3",			"c")
+	aadd("z-module-1",			"science-pack-1",			"a")
+	aadd("z-module-1",			"science-pack-2",			"b")
+	aadd("z-module-1",			"science-pack-3",			"c")
+	aadd("z-module-1",			"alien-science-pack",		"d")
 	
-	aadd("z-module-4",			"productivity-module",		"a")
-	aadd("z-module-4",			"productivity-module-2",	"b")
-	aadd("z-module-4",			"productivity-module-3",	"c")
+	aadd("z-module-4",			"speed-module",				"a")
+	aadd("z-module-4",			"speed-module-2",			"b")
+	aadd("z-module-4",			"speed-module-3",			"c")
 	
-	aadd("z-module-5",			"effectivity-module",		"a")
-	aadd("z-module-5",			"effectivity-module-2",		"b")
-	aadd("z-module-5",			"effectivity-module-3",		"c")
+	aadd("z-module-5",			"productivity-module",		"a")
+	aadd("z-module-5",			"productivity-module-2",	"b")
+	aadd("z-module-5",			"productivity-module-3",	"c")
+	
+	aadd("z-module-6",			"effectivity-module",		"a")
+	aadd("z-module-6",			"effectivity-module-2",		"b")
+	aadd("z-module-6",			"effectivity-module-3",		"c")
 end
 do	--[[trains-vehicles]]--
 	aadd("z-trains-0",			"diesel-locomotive",		"c")

@@ -561,34 +561,34 @@ end
 do	--[[module]]--
 	aadd("z-module-0",			"5d-welder",					"i")
 	
-	aadd("z-module-3",			"5d-speed-module-4",			"d")
-	aadd("z-module-3",			"5d-speed-module-5",			"e")
+	aadd("z-module-4",			"5d-speed-module-4",			"d")
+	aadd("z-module-4",			"5d-speed-module-5",			"e")
 	
-	aadd("z-module-4",			"5d-productivity-module-4",		"d")
-	aadd("z-module-4",			"5d-productivity-module-5",		"e")
+	aadd("z-module-5",			"5d-productivity-module-4",		"d")
+	aadd("z-module-5",			"5d-productivity-module-5",		"e")
 	
-	aadd("z-module-5",			"5d-effectivity-module-4",		"d")
-	aadd("z-module-5",			"5d-effectivity-module-5",		"e")
+	aadd("z-module-6",			"5d-effectivity-module-4",		"d")
+	aadd("z-module-6",			"5d-effectivity-module-5",		"e")
 	
-	aadd("z-module-6",			"5d-pollution-module-1",		"a")
-	aadd("z-module-6",			"5d-pollution-module-2",		"b")
-	aadd("z-module-6",			"5d-pollution-module-3",		"c")
-	aadd("z-module-6",			"5d-pollution-module-4",		"d")
-	aadd("z-module-6",			"5d-pollution-module-5",		"e")
+	aadd("z-module-7",			"5d-pollution-module-1",		"a")
+	aadd("z-module-7",			"5d-pollution-module-2",		"b")
+	aadd("z-module-7",			"5d-pollution-module-3",		"c")
+	aadd("z-module-7",			"5d-pollution-module-4",		"d")
+	aadd("z-module-7",			"5d-pollution-module-5",		"e")
 	
-	aadd("z-module-7",			"5d-speed-effectivity-4",		"a")
-	aadd("z-module-7",			"5d-speed-pollution-4",			"b")
-	aadd("z-module-7",			"5d-speed-productivity-4",		"c")
-	aadd("z-module-7",			"5d-pollution-effectivity-4",	"d")
-	aadd("z-module-7",			"5d-pollution-productivity-4",	"e")
-	aadd("z-module-7",			"5d-effectivity-productivity-4","f")
+	aadd("z-module-8",			"5d-speed-effectivity-4",		"a")
+	aadd("z-module-8",			"5d-speed-pollution-4",			"b")
+	aadd("z-module-8",			"5d-speed-productivity-4",		"c")
+	aadd("z-module-8",			"5d-pollution-effectivity-4",	"d")
+	aadd("z-module-8",			"5d-pollution-productivity-4",	"e")
+	aadd("z-module-8",			"5d-effectivity-productivity-4","f")
 	
-	aadd("z-module-8",			"5d-speed-effectivity-5",		"a")
-	aadd("z-module-8",			"5d-speed-pollution-5",			"b")
-	aadd("z-module-8",			"5d-speed-productivity-5",		"c")
-	aadd("z-module-8",			"5d-pollution-effectivity-5",	"d")
-	aadd("z-module-8",			"5d-pollution-productivity-5",	"e")
-	aadd("z-module-8",			"5d-effectivity-productivity-5","f")
+	aadd("z-module-9",			"5d-speed-effectivity-5",		"a")
+	aadd("z-module-9",			"5d-speed-pollution-5",			"b")
+	aadd("z-module-9",			"5d-speed-productivity-5",		"c")
+	aadd("z-module-9",			"5d-pollution-effectivity-5",	"d")
+	aadd("z-module-9",			"5d-pollution-productivity-5",	"e")
+	aadd("z-module-9",			"5d-effectivity-productivity-5","f")
 	
 	if data.raw.module["5d-effectivity-productivity-5"] then
 		local lim = data.raw.module["5d-effectivity-productivity-5"].limitation
